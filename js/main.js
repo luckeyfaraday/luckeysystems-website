@@ -31,6 +31,30 @@
     });
   });
 
+  /* ---------- mobile nav ---------- */
+
+  const header = document.querySelector(".site-header");
+  const navToggle = document.querySelector(".nav-toggle");
+  if (header && navToggle) {
+    const closeNav = () => {
+      header.classList.remove("nav-open");
+      navToggle.setAttribute("aria-expanded", "false");
+    };
+    navToggle.addEventListener("click", () => {
+      const open = header.classList.toggle("nav-open");
+      navToggle.setAttribute("aria-expanded", String(open));
+    });
+    document.querySelectorAll(".site-nav a").forEach((a) =>
+      a.addEventListener("click", closeNav)
+    );
+    document.addEventListener("click", (e) => {
+      if (header.classList.contains("nav-open") && !header.contains(e.target)) closeNav();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeNav();
+    });
+  }
+
   /* ---------- scroll reveals ---------- */
 
   const sections = document.querySelectorAll(".section, .closing, .ticker");
