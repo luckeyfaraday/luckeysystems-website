@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Athena — An AI Workshop That Remembers | LuckeySystems</title>
+  <meta name="description" content="Athena is LuckeySystems' open-source, local-first ecosystem of AI tools that remember your work: a desktop command room for coding agents, a terminal agent with persistent memory, a mobile companion, and system-wide voice dictation. MIT licensed. No cloud required." />
+  <meta property="og:title" content="Athena — An AI Workshop That Remembers" />
+  <meta property="og:description" content="Open-source, local-first AI tools by LuckeySystems: Athena Desktop, Athena Code, Athena Mobile, Athena Whisper." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/athena-icon-32.png" />
+  <link rel="icon" type="image/png" sizes="128x128" href="assets/athena-icon-128.png" />
+  <link rel="apple-touch-icon" href="assets/athena-app-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============ fixed atmosphere layers ============ -->
+  <div class="atmo atmo-grain" aria-hidden="true"></div>
+  <div class="atmo atmo-constellation" aria-hidden="true">
+    <svg viewBox="0 0 1400 900" preserveAspectRatio="xMidYMid slice">
+      <g class="const-lines" stroke="currentColor" stroke-width="1" opacity=".35">
+        <path d="M180 140 L460 90 L820 210 L1180 120 M460 90 L380 420 L820 210 M380 420 L160 640 L640 760 L1080 560 L1180 120 M640 760 L820 210 M1080 560 L1240 780" fill="none"/>
+      </g>
+      <g class="const-marks" fill="none" stroke="currentColor" stroke-linecap="round">
+        <g transform="translate(180 140) scale(.16)"><use href="#ast"/></g>
+        <g transform="translate(460 90) scale(.26) rotate(14)"><use href="#ast"/></g>
+        <g transform="translate(820 210) scale(.42) rotate(-9)"><use href="#ast"/></g>
+        <g transform="translate(1180 120) scale(.2)"><use href="#ast"/></g>
+        <g transform="translate(380 420) scale(.22) rotate(30)"><use href="#ast"/></g>
+        <g transform="translate(160 640) scale(.3) rotate(-20)"><use href="#ast"/></g>
+        <g transform="translate(640 760) scale(.18)"><use href="#ast"/></g>
+        <g transform="translate(1080 560) scale(.34) rotate(8)"><use href="#ast"/></g>
+        <g transform="translate(1240 780) scale(.14)"><use href="#ast"/></g>
+      </g>
+    </svg>
+  </div>
+
+  <!-- shared symbol: the Athena asterisk, centered on origin -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <g id="ast" stroke-width="28">
+        <line x1="0" y1="-34" x2="0" y2="-86"/>
+        <line x1="0" y1="34" x2="0" y2="86"/>
+        <line x1="29.4" y1="-17" x2="74.5" y2="-43"/>
+        <line x1="29.4" y1="17" x2="74.5" y2="43"/>
+        <line x1="-29.4" y1="-17" x2="-74.5" y2="-43"/>
+        <line x1="-29.4" y1="17" x2="-74.5" y2="43"/>
+      </g>
+    </defs>
+  </svg>
+
+  <div class="frame">
+
+    <!-- ============ header ============ -->
+    <header class="site-header reveal">
+      <a class="brand" href="#top" aria-label="Athena home">
+        <svg class="brand-mark" viewBox="-110 -110 220 220" aria-hidden="true"><g stroke="currentColor" stroke-linecap="round"><use href="#ast"/></g></svg>
+        <span class="brand-name">ATHENA</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#products"><span class="nav-label">PRODUCTS</span><span class="cursor" aria-hidden="true"></span></a>
+        <a href="#action"><span class="nav-label">DEMO</span><span class="cursor" aria-hidden="true"></span></a>
+        <a href="#ecosystem"><span class="nav-label">ECOSYSTEM</span><span class="cursor" aria-hidden="true"></span></a>
+        <a href="#principles"><span class="nav-label">PRINCIPLES</span><span class="cursor" aria-hidden="true"></span></a>
+        <a href="#foundation"><span class="nav-label">FOUNDATION</span><span class="cursor" aria-hidden="true"></span></a>
+      </nav>
+      <div class="header-meta">
+        <span class="px-label dim">LUCKEYSYSTEMS</span>
+        <a class="gh-link" href="https://github.com/luckeyfaraday" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        </a>
+      </div>
+    </header>
+
+    <!-- ============ hero ============ -->
+    <main id="top">
+      <section class="hero">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="px-label gold-tag reveal">✳ OPEN SOURCE · MIT LICENSE · LOCAL-FIRST</p>
+            <h1 class="reveal d1">
+              AN AI WORKSHOP<br />
+              THAT <em>REMEMBERS<span class="gold">.</span></em>
+            </h1>
+            <p class="hero-sub reveal d2">
+              Most AI tools wake up with amnesia. <strong>Athena</strong> is an ecosystem of
+              open&#8209;source, local&#8209;first tools that keep durable memory of your work —
+              a desktop command room for coding agents, a terminal agent that recalls past
+              sessions, a mobile companion, and system&#8209;wide voice dictation.
+              Everything runs on your machine. Nothing phones home.
+            </p>
+            <div class="hero-actions reveal d3">
+              <div class="install-block">
+                <span class="px-label dim">INSTALL ATHENA CODE</span>
+                <div class="install-row">
+                  <code id="install-cmd">curl -fsSL https://raw.githubusercontent.com/luckeyfaraday/athena-code/main/scripts/install.sh | bash</code>
+                  <button class="copy-btn" data-copy="#install-cmd" aria-label="Copy install command">COPY</button>
+                </div>
+              </div>
+              <a class="btn-solid" href="https://github.com/luckeyfaraday" target="_blank" rel="noopener">BROWSE THE SOURCE&nbsp;↗</a>
+            </div>
+          </div>
+          <div class="hero-figure reveal d2" aria-hidden="true">
+            <div class="spec-plate">
+              <svg class="plate-mark" viewBox="-130 -130 260 260"><g stroke="currentColor" stroke-linecap="round"><use href="#ast"/></g></svg>
+              <div class="plate-rule"></div>
+              <dl class="plate-data">
+                <div><dt>FIG.</dt><dd>001 — THE MARK</dd></div>
+                <div><dt>SYSTEM</dt><dd>ATHENA</dd></div>
+                <div><dt>BUILT BY</dt><dd>LUCKEYSYSTEMS</dd></div>
+                <div><dt>RUNS ON</dt><dd>YOUR HARDWARE</dd></div>
+                <div><dt>CLOUD REQ.</dt><dd class="gold">NONE</dd></div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ ticker ============ -->
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+          <span>ATHENA DESKTOP&ensp;✳&ensp;ATHENA CODE&ensp;✳&ensp;ATHENA MOBILE&ensp;✳&ensp;ATHENA WHISPER&ensp;✳&ensp;PERSISTENT MEMORY&ensp;✳&ensp;SESSION RECALL&ensp;✳&ensp;MIT LICENSED&ensp;✳&ensp;NO CLOUD REQUIRED&ensp;✳&ensp;CODEX · CLAUDE CODE · OPENCODE · HERMES&ensp;✳&ensp;</span>
+          <span>ATHENA DESKTOP&ensp;✳&ensp;ATHENA CODE&ensp;✳&ensp;ATHENA MOBILE&ensp;✳&ensp;ATHENA WHISPER&ensp;✳&ensp;PERSISTENT MEMORY&ensp;✳&ensp;SESSION RECALL&ensp;✳&ensp;MIT LICENSED&ensp;✳&ensp;NO CLOUD REQUIRED&ensp;✳&ensp;CODEX · CLAUDE CODE · OPENCODE · HERMES&ensp;✳&ensp;</span>
+        </div>
+      </div>
+
+      <!-- ============ terminal demo ============ -->
+      <section id="action" class="section">
+        <div class="section-head">
+          <span class="px-label">SEE IT IN ACTION</span>
+          <span class="px-label dim">FIG. 002 — ATHENA CODE, SECOND SESSION</span>
+        </div>
+        <div class="terminal" data-terminal>
+          <div class="terminal-bar">
+            <span class="t-dot"></span><span class="t-dot"></span><span class="t-dot"></span>
+            <span class="t-title">~/projects/api-server — athena-code</span>
+            <span class="t-mem px-label">MEM: <b data-memcount>0</b> FACTS</span>
+          </div>
+          <pre class="terminal-body" data-screen aria-live="off"></pre>
+        </div>
+        <p class="caption">Athena Code freezes one deterministic memory snapshot per session, recalls related
+        facts on every turn, and indexes prior conversations — its own <em>and</em> your local Claude Code,
+        Codex, opencode, and Hermes histories — with SQLite FTS5.</p>
+      </section>
+
+      <!-- ============ products ============ -->
+      <section id="products" class="section">
+        <div class="section-head">
+          <span class="px-label">THE INSTRUMENTS</span>
+          <span class="px-label dim">04 CORE TOOLS</span>
+        </div>
+
+        <div class="product-grid">
+
+          <article class="product">
+            <header>
+              <span class="p-num">01</span>
+              <span class="px-label p-kind">DESKTOP · COMMAND ROOM</span>
+            </header>
+            <h3>ATHENA<span class="gold">_</span>DESKTOP</h3>
+            <p>A local command room for AI coding agents. One Electron app embeds native
+            terminals for <b>Codex, OpenCode, Claude Code, and Hermes</b>, resumes sessions
+            already on disk, generates bounded project handoffs, and keeps recall context
+            ready for the next fresh agent. MCP bridge included, so your agent can drive
+            the workspace itself.</p>
+            <ul class="p-tags">
+              <li>ELECTRON</li><li>REACT</li><li>FASTAPI</li><li>MCP</li><li>node-pty + xterm.js</li>
+            </ul>
+            <footer>
+              <span class="px-label dim">LINUX / WINDOWS / WSL</span>
+              <a href="https://github.com/luckeyfaraday/Athena" target="_blank" rel="noopener">REPO&nbsp;↗</a>
+            </footer>
+          </article>
+
+          <article class="product">
+            <header>
+              <span class="p-num">02</span>
+              <span class="px-label p-kind">TERMINAL · CODING AGENT</span>
+            </header>
+            <h3>ATHENA<span class="gold">_</span>CODE</h3>
+            <p>A terminal AI coding agent with <b>persistent local memory</b>. It saves stable
+            facts and decisions, automatically recalls what's relevant each turn, and
+            searches across every past session — without shipping your context to anyone.
+            A memory-focused fork of OpenCode with native <code>memory_write</code>,
+            <code>memory_read</code>, and <code>session_recall</code> tools.</p>
+            <ul class="p-tags">
+              <li>TYPESCRIPT</li><li>SQLITE FTS5</li><li>LOCAL-FIRST</li><li>x64 + ARM64</li>
+            </ul>
+            <footer>
+              <span class="px-label dim">LINUX / MACOS / WINDOWS</span>
+              <a href="https://github.com/luckeyfaraday/athena-code" target="_blank" rel="noopener">REPO&nbsp;↗</a>
+            </footer>
+          </article>
+
+          <article class="product">
+            <header>
+              <span class="p-num">03</span>
+              <span class="px-label p-kind">POCKET · COMPANION</span>
+            </header>
+            <h3>ATHENA<span class="gold">_</span>MOBILE</h3>
+            <p>Your workshop, from the couch. A PWA companion that reaches the Athena
+            desktop over <b>Tailscale</b> — binding only to your tailnet address, with a
+            same-origin proxy into Athena's localhost-only backend. Check on agents and
+            sessions from your phone while the work stays on your machine, off every
+            other network.</p>
+            <ul class="p-tags">
+              <li>PWA</li><li>TYPESCRIPT</li><li>TAILSCALE</li><li>VITE</li>
+            </ul>
+            <footer>
+              <span class="px-label dim">ANY PHONE, YOUR TAILNET</span>
+              <a href="https://github.com/luckeyfaraday/athena-mobile" target="_blank" rel="noopener">REPO&nbsp;↗</a>
+            </footer>
+          </article>
+
+          <article class="product">
+            <header>
+              <span class="p-num">04</span>
+              <span class="px-label p-kind">VOICE · DICTATION</span>
+            </header>
+            <h3>ATHENA<span class="gold">_</span>WHISPER</h3>
+            <p>Talk to any text field on your desktop. A floating always-on-top widget that
+            records, transcribes locally with <b>faster-whisper</b>, cleans up spoken
+            punctuation, and types the result into terminals, coding agents, browsers —
+            whatever has focus. The local-first answer to cloud dictation tools like
+            Wispr Flow.</p>
+            <ul class="p-tags">
+              <li>PYTHON</li><li>FASTER-WHISPER</li><li>PYQT</li><li>X11 / WAYLAND / WIN</li>
+            </ul>
+            <footer>
+              <span class="px-label dim">LOCAL TRANSCRIPTION ONLY</span>
+              <a href="https://github.com/luckeyfaraday/athena-whisper" target="_blank" rel="noopener">REPO&nbsp;↗</a>
+            </footer>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ============ ecosystem ============ -->
+      <section id="ecosystem" class="section">
+        <div class="section-head">
+          <span class="px-label">THE WIDER BENCH</span>
+          <span class="px-label dim">SUPPORTING REPOS</span>
+        </div>
+        <div class="eco-grid">
+          <a class="eco-cell" href="https://github.com/luckeyfaraday/sessions-search" target="_blank" rel="noopener">
+            <span class="eco-name">sessions-search</span>
+            <span class="eco-desc">Search across all your Codex, Claude Code, OpenCode and Hermes sessions.</span>
+          </a>
+          <a class="eco-cell" href="https://github.com/luckeyfaraday/ambient-ai" target="_blank" rel="noopener">
+            <span class="eco-name">ambient-ai</span>
+            <span class="eco-desc">Local context substrate — gathers ambient signals, compacts them, hands clean context to any agent.</span>
+          </a>
+          <a class="eco-cell" href="https://github.com/luckeyfaraday/athena-usage-tracker" target="_blank" rel="noopener">
+            <span class="eco-name">athena-usage-tracker</span>
+            <span class="eco-desc">Local dashboard for Codex and Claude Code usage limits.</span>
+          </a>
+          <a class="eco-cell" href="https://github.com/luckeyfaraday/hermes-mobile" target="_blank" rel="noopener">
+            <span class="eco-name">hermes-mobile</span>
+            <span class="eco-desc">Mobile web bridge for Hermes Desktop with same-origin proxying.</span>
+          </a>
+          <a class="eco-cell" href="https://github.com/luckeyfaraday/OpenGolem" target="_blank" rel="noopener">
+            <span class="eco-name">OpenGolem</span>
+            <span class="eco-desc">Open-source desktop AI coding agent with OAuth, workspace isolation, skills, and MCP.</span>
+          </a>
+          <a class="eco-cell" href="https://github.com/luckeyfaraday?tab=repositories" target="_blank" rel="noopener">
+            <span class="eco-name">+ everything else</span>
+            <span class="eco-desc">17 public repos and counting. All of it readable, forkable, yours. ↗</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ============ principles ============ -->
+      <section id="principles" class="section">
+        <div class="section-head">
+          <span class="px-label">OPERATING PRINCIPLES</span>
+          <span class="px-label dim">FIG. 003 — WHY WE BUILD LIKE THIS</span>
+        </div>
+        <div class="principles">
+          <div class="principle">
+            <span class="pr-num">I.</span>
+            <h4>LOCAL-FIRST, ALWAYS</h4>
+            <p>Memory, recall, transcripts, and audio live in files on your disk. The hot
+            paths need no backend service and no account. The cloud is an option, never
+            a dependency.</p>
+          </div>
+          <div class="principle">
+            <span class="pr-num">II.</span>
+            <h4>MEMORY IS THE PRODUCT</h4>
+            <p>An agent that forgets your architecture every morning isn't a colleague,
+            it's an intern on their first day — forever. Every Athena tool reads and
+            writes durable, searchable context.</p>
+          </div>
+          <div class="principle">
+            <span class="pr-num">III.</span>
+            <h4>AGENT-AGNOSTIC</h4>
+            <p>Codex, Claude Code, OpenCode, Hermes — bring whichever agent you already
+            pay for. Athena is the workshop around them, not another walled garden.</p>
+          </div>
+          <div class="principle">
+            <span class="pr-num">IV.</span>
+            <h4>ACTUALLY OPEN</h4>
+            <p>MIT licensed. Readable code, real install scripts, checksummed releases.
+            If you can't read it, fork it, and run it offline, it isn't yours.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ foundation ============ -->
+      <section id="foundation" class="section foundation">
+        <div class="section-head">
+          <span class="px-label">THE LUCKEYSYSTEMS FOUNDATION</span>
+          <span class="px-label dim">FIG. 004 — STEWARDSHIP</span>
+        </div>
+        <div class="foundation-inner">
+          <div class="foundation-lead">
+            <svg class="foundation-mark" viewBox="-110 -110 220 220" aria-hidden="true"><g stroke="currentColor" stroke-linecap="round"><use href="#ast"/></g></svg>
+            <h2>GOOD TOOLS SHOULD <em>OUTLIVE</em> THEIR MAKERS<span class="gold">.</span></h2>
+            <p>The <strong>LuckeySystems Foundation</strong> is the permanent steward of the
+            Athena ecosystem. Software you depend on shouldn't vanish behind an acquisition,
+            a pivot, or a maintainer's bad year — so the foundation exists to keep these
+            tools open, local-first, and maintained, independent of any one company, cloud,
+            or person. It holds the projects in trust for the people who run them.</p>
+            <div class="foundation-actions">
+              <a class="btn-solid invert" href="https://github.com/luckeyfaraday" target="_blank" rel="noopener">GET INVOLVED&nbsp;↗</a>
+              <span class="px-label foundation-seal">EST. 2026 ✳ HOLDS THE ATHENA MARKS IN TRUST</span>
+            </div>
+          </div>
+          <div class="charter" aria-label="Foundation charter">
+            <div class="charter-cell">
+              <span class="ch-num">A.</span>
+              <h4>KEEP IT OPEN</h4>
+              <p>Every Athena project ships under the MIT license, permanently. The
+              foundation holds the repositories and marks so no buyout or rug-pull can
+              ever close the source behind you.</p>
+            </div>
+            <div class="charter-cell">
+              <span class="ch-num">B.</span>
+              <h4>GUARD LOCAL-FIRST</h4>
+              <p>Local-first is constitutional, not a feature flag. Anything that requires
+              a cloud account, a subscription, or telemetry to function does not ship in
+              an Athena core tool.</p>
+            </div>
+            <div class="charter-cell">
+              <span class="ch-num">C.</span>
+              <h4>FUND THE WORK</h4>
+              <p>Contributions go where the work is: maintainer time, CI runners, release
+              infrastructure, and code-signing certificates — published in the open like
+              everything else.</p>
+            </div>
+            <div class="charter-cell">
+              <span class="ch-num">D.</span>
+              <h4>GROW THE BENCH</h4>
+              <p>The ecosystem outgrows its founder by design. The foundation mentors new
+              contributors and adopts tools that share the charter, so the workshop keeps
+              getting bigger.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ closing CTA ============ -->
+      <section class="closing">
+        <svg class="closing-mark spin-slow" viewBox="-110 -110 220 220" aria-hidden="true"><g stroke="currentColor" stroke-linecap="round"><use href="#ast"/></g></svg>
+        <h2>YOUR MACHINE.<br/>YOUR MEMORY.<br/>YOUR <em>WORKSHOP<span class="gold">.</span></em></h2>
+        <a class="btn-solid big" href="https://github.com/luckeyfaraday" target="_blank" rel="noopener">GITHUB.COM/LUCKEYFARADAY&nbsp;↗</a>
+      </section>
+    </main>
+
+    <!-- ============ footer ============ -->
+    <footer class="site-footer">
+      <div class="footer-lockup" aria-hidden="true">
+        <svg class="footer-mark" viewBox="-110 -110 220 220"><g stroke="currentColor" stroke-linecap="round"><use href="#ast"/></g></svg>
+        <svg class="footer-word" viewBox="0 0 420 70" fill="none" role="img" aria-label="ATHENA">
+          <g stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter" transform="translate(34 8)">
+            <path d="M0 52 L16 10 L32 52"/>
+            <path d="M64 10 H100 M82 10 V52"/>
+            <path d="M132 10 V52 M168 10 V52 M132 31 H168"/>
+            <path d="M204 10 H238 M204 31 H233 M204 52 H240 M204 10 V52"/>
+            <path d="M276 52 V10 L314 52 V10"/>
+            <path d="M348 52 L364 10 L380 52"/>
+          </g>
+        </svg>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <span class="px-label gold">PRODUCTS</span>
+          <a href="https://github.com/luckeyfaraday/Athena" target="_blank" rel="noopener">Athena Desktop</a>
+          <a href="https://github.com/luckeyfaraday/athena-code" target="_blank" rel="noopener">Athena Code</a>
+          <a href="https://github.com/luckeyfaraday/athena-mobile" target="_blank" rel="noopener">Athena Mobile</a>
+          <a href="https://github.com/luckeyfaraday/athena-whisper" target="_blank" rel="noopener">Athena Whisper</a>
+        </div>
+        <div class="footer-col">
+          <span class="px-label gold">ECOSYSTEM</span>
+          <a href="https://github.com/luckeyfaraday/sessions-search" target="_blank" rel="noopener">sessions-search</a>
+          <a href="https://github.com/luckeyfaraday/ambient-ai" target="_blank" rel="noopener">ambient-ai</a>
+          <a href="https://github.com/luckeyfaraday/athena-usage-tracker" target="_blank" rel="noopener">usage-tracker</a>
+          <a href="https://github.com/luckeyfaraday/OpenGolem" target="_blank" rel="noopener">OpenGolem</a>
+        </div>
+        <div class="footer-col">
+          <span class="px-label gold">ELSEWHERE</span>
+          <a href="#foundation">The Foundation</a>
+          <a href="https://github.com/luckeyfaraday" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="https://x.com/luckeyfaraday" target="_blank" rel="noopener">X / Twitter ↗</a>
+        </div>
+        <div class="footer-col footer-note">
+          <span class="px-label gold">COLOPHON</span>
+          <p>Set in Bricolage Grotesque, IBM&nbsp;Plex&nbsp;Mono &amp; Silkscreen on
+          hand-pressed cream. No trackers, no analytics, no cookies — obviously.</p>
+        </div>
+      </div>
+      <div class="footer-base">
+        <span class="px-label">LUCKEYSYSTEMS ✳ BUILDING OSS</span>
+        <span class="px-label dim" data-status>ALL SYSTEMS LOCAL</span>
+        <span class="px-label">MIT LICENSE · 2026</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
