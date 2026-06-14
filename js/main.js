@@ -83,7 +83,7 @@
     { html: '<span class="tc-prompt">$ </span>', mode: "instant", pause: 400 },
     { html: "athena-code", mode: "type", cps: 70, pause: 500 },
     { html: "\n", mode: "instant", pause: 250 },
-    { html: '<span class="tc-dim">◆ athena-code v0.2.1 — memory online</span>\n', mode: "instant", pause: 350 },
+    { html: '<span class="tc-dim">◆ athena-code v0.3.1 — memory online</span>\n', mode: "instant", pause: 350 },
     { html: '<span class="tc-ok">▸ recall:</span> 3 memories loaded for <span class="tc-dim">~/projects/api-server</span>\n', mode: "instant", pause: 200, mem: 3 },
     { html: '<span class="tc-dim">    · prefers pytest over unittest</span>\n', mode: "instant", pause: 160 },
     { html: '<span class="tc-dim">    · auth tokens rotate via scripts/rotate.sh</span>\n', mode: "instant", pause: 160 },

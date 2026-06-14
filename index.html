@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#f3ede3" />
   <title>Athena — An AI Workshop That Remembers | LuckeySystems</title>
-  <meta name="description" content="Athena is LuckeySystems' open-source, local-first ecosystem of AI tools that remember your work: a desktop command room for coding agents, a terminal agent with persistent memory, a mobile companion, and system-wide voice dictation. MIT licensed. No cloud required." />
+  <meta name="description" content="Athena is LuckeySystems' open-source, local-first ecosystem of AI tools that remember your work: a desktop command room for coding agents, a terminal agent with persistent memory, a mobile companion, and system-wide voice dictation. Athena Code is MIT licensed; the other repos are source-available. No LuckeySystems cloud required." />
   <meta property="og:title" content="Athena — An AI Workshop That Remembers" />
   <meta property="og:description" content="Open-source, local-first AI tools by LuckeySystems: Athena Desktop, Athena Code, Athena Mobile, Athena Whisper." />
   <meta property="og:type" content="website" />
@@ -84,7 +84,7 @@
       <section class="hero">
         <div class="hero-grid">
           <div class="hero-copy">
-            <p class="px-label gold-tag reveal">✳ OPEN SOURCE · MIT LICENSE · LOCAL-FIRST</p>
+            <p class="px-label gold-tag reveal">✳ OPEN SOURCE · LOCAL-FIRST · MIT WHERE LICENSED</p>
             <h1 class="reveal d1">
               AN AI WORKSHOP<br />
               THAT <em>REMEMBERS<span class="gold">.</span></em>
@@ -94,7 +94,7 @@
               open&#8209;source, local&#8209;first tools that keep durable memory of your work —
               a desktop command room for coding agents, a terminal agent that recalls past
               sessions, a mobile companion, and system&#8209;wide voice dictation.
-              Everything runs on your machine. Nothing phones home.
+              Memory, history, and orchestration stay on your machine — no LuckeySystems cloud required.
             </p>
             <div class="hero-actions reveal d3">
               <div class="install-block">
@@ -126,8 +126,8 @@
       <!-- ============ ticker ============ -->
       <div class="ticker" aria-hidden="true">
         <div class="ticker-track">
-          <span>ATHENA DESKTOP&ensp;✳&ensp;ATHENA CODE&ensp;✳&ensp;ATHENA MOBILE&ensp;✳&ensp;ATHENA WHISPER&ensp;✳&ensp;PERSISTENT MEMORY&ensp;✳&ensp;SESSION RECALL&ensp;✳&ensp;MIT LICENSED&ensp;✳&ensp;NO CLOUD REQUIRED&ensp;✳&ensp;CODEX · CLAUDE CODE · OPENCODE · HERMES&ensp;✳&ensp;</span>
-          <span>ATHENA DESKTOP&ensp;✳&ensp;ATHENA CODE&ensp;✳&ensp;ATHENA MOBILE&ensp;✳&ensp;ATHENA WHISPER&ensp;✳&ensp;PERSISTENT MEMORY&ensp;✳&ensp;SESSION RECALL&ensp;✳&ensp;MIT LICENSED&ensp;✳&ensp;NO CLOUD REQUIRED&ensp;✳&ensp;CODEX · CLAUDE CODE · OPENCODE · HERMES&ensp;✳&ensp;</span>
+          <span>ATHENA DESKTOP&ensp;✳&ensp;ATHENA CODE&ensp;✳&ensp;ATHENA MOBILE&ensp;✳&ensp;ATHENA WHISPER&ensp;✳&ensp;PERSISTENT MEMORY&ensp;✳&ensp;SESSION RECALL&ensp;✳&ensp;SOURCE-AVAILABLE&ensp;✳&ensp;NO LUCKEYSYSTEMS CLOUD&ensp;✳&ensp;CODEX · CLAUDE CODE · OPENCODE · HERMES&ensp;✳&ensp;</span>
+          <span>ATHENA DESKTOP&ensp;✳&ensp;ATHENA CODE&ensp;✳&ensp;ATHENA MOBILE&ensp;✳&ensp;ATHENA WHISPER&ensp;✳&ensp;PERSISTENT MEMORY&ensp;✳&ensp;SESSION RECALL&ensp;✳&ensp;SOURCE-AVAILABLE&ensp;✳&ensp;NO LUCKEYSYSTEMS CLOUD&ensp;✳&ensp;CODEX · CLAUDE CODE · OPENCODE · HERMES&ensp;✳&ensp;</span>
         </div>
       </div>
 
@@ -174,7 +174,7 @@
               <li>ELECTRON</li><li>REACT</li><li>FASTAPI</li><li>MCP</li><li>node-pty + xterm.js</li>
             </ul>
             <footer>
-              <span class="px-label dim">LINUX / WINDOWS / WSL</span>
+              <span class="px-label dim">LINUX / WINDOWS / MACOS</span>
               <a href="https://github.com/luckeyfaraday/Athena" target="_blank" rel="noopener">REPO&nbsp;↗</a>
             </footer>
           </article>
@@ -206,10 +206,10 @@
             </header>
             <h3>ATHENA<span class="gold">_</span>MOBILE</h3>
             <p>Your workshop, from the couch. A PWA companion that reaches the Athena
-            desktop over <b>Tailscale</b> — binding only to your tailnet address, with a
-            same-origin proxy into Athena's localhost-only backend. Check on agents and
-            sessions from your phone while the work stays on your machine, off every
-            other network.</p>
+            desktop over <b>Tailscale</b> — served from loopback and published privately
+            over your tailnet, with a same-origin proxy into Athena's localhost-only
+            backend. Check on agents and sessions from your phone while the work stays on
+            your machine, off the public internet.</p>
             <ul class="p-tags">
               <li>PWA</li><li>TYPESCRIPT</li><li>TAILSCALE</li><li>VITE</li>
             </ul>
@@ -234,7 +234,7 @@
               <li>PYTHON</li><li>FASTER-WHISPER</li><li>PYQT</li><li>X11 / WAYLAND / WIN</li>
             </ul>
             <footer>
-              <span class="px-label dim">LOCAL TRANSCRIPTION ONLY</span>
+              <span class="px-label dim">LOCAL BY DEFAULT</span>
               <a href="https://github.com/luckeyfaraday/athena-whisper" target="_blank" rel="noopener">REPO&nbsp;↗</a>
             </footer>
           </article>
@@ -263,7 +263,7 @@
           </a>
           <a class="eco-cell" href="https://github.com/luckeyfaraday/hermes-mobile" target="_blank" rel="noopener">
             <span class="eco-name">hermes-mobile</span>
-            <span class="eco-desc">Mobile web bridge for Hermes Desktop with same-origin proxying.</span>
+            <span class="eco-desc">Private PWA bridge for the Hermes gateway, with same-origin REST/SSE proxying.</span>
           </a>
           <a class="eco-cell" href="https://github.com/luckeyfaraday/OpenGolem" target="_blank" rel="noopener">
             <span class="eco-name">OpenGolem</span>
@@ -271,7 +271,7 @@
           </a>
           <a class="eco-cell" href="https://github.com/luckeyfaraday?tab=repositories" target="_blank" rel="noopener">
             <span class="eco-name">+ everything else</span>
-            <span class="eco-desc">17 public repos and counting. All of it readable, forkable, yours. ↗</span>
+            <span class="eco-desc">17 original repos (21 public including forks) and counting. All of it readable, forkable, yours. ↗</span>
           </a>
         </div>
       </section>
@@ -306,8 +306,9 @@
           <div class="principle">
             <span class="pr-num">IV.</span>
             <h4>ACTUALLY OPEN</h4>
-            <p>MIT licensed. Readable code, real install scripts, checksummed releases.
-            If you can't read it, fork it, and run it offline, it isn't yours.</p>
+            <p>Readable code, real install scripts, checksummed releases. Athena Code is
+            MIT licensed; every repo is public and source-available. If you can't read it,
+            fork it, and run it offline, it isn't yours.</p>
           </div>
         </div>
       </section>
@@ -337,9 +338,10 @@
             <div class="charter-cell">
               <span class="ch-num">A.</span>
               <h4>KEEP IT OPEN</h4>
-              <p>Every Athena project ships under the MIT license, permanently. The
-              foundation holds the repositories and marks so no buyout or rug-pull can
-              ever close the source behind you.</p>
+              <p>Athena Code ships under the MIT license, and every Athena project stays
+              open — with explicit open licenses added as the foundation takes each repo
+              into trust. The foundation will hold the repositories and marks so no buyout
+              or rug-pull can ever close the source behind you.</p>
             </div>
             <div class="charter-cell">
               <span class="ch-num">B.</span>
@@ -420,7 +422,7 @@
       <div class="footer-base">
         <span class="px-label">LUCKEYSYSTEMS ✳ BUILDING OSS</span>
         <span class="px-label dim" data-status>ALL SYSTEMS LOCAL</span>
-        <span class="px-label">MIT LICENSE · 2026</span>
+        <span class="px-label">SOURCE-AVAILABLE · 2026</span>
       </div>
     </footer>
 
