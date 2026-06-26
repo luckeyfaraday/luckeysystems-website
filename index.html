@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#f3ede3" />
   <title>Athena — An AI Workshop That Remembers | LuckeySystems</title>
-  <meta name="description" content="Athena is LuckeySystems' open-source, local-first ecosystem of AI tools that remember your work: a desktop command room for coding agents, a terminal agent with persistent memory, a mobile companion, and system-wide voice dictation. Athena Code is MIT licensed; the other repos are source-available. No LuckeySystems cloud required." />
+  <meta name="description" content="Athena is LuckeySystems' open-source, local-first ecosystem of AI tools that remember your work: a desktop command room for coding agents, a terminal agent with persistent memory, a deterministic multi-agent orchestration loop, and system-wide voice dictation. Athena Code is MIT licensed; the other repos are source-available. No LuckeySystems cloud required." />
   <meta property="og:title" content="Athena — An AI Workshop That Remembers" />
-  <meta property="og:description" content="Open-source, local-first AI tools by LuckeySystems: Athena Desktop, Athena Code, Athena Mobile, Athena Whisper." />
+  <meta property="og:description" content="Open-source, local-first AI tools by LuckeySystems: Athena Desktop, Athena Code, Athena Loops, Athena Whisper." />
   <meta property="og:type" content="website" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/athena-icon-32.png" />
   <link rel="icon" type="image/png" sizes="128x128" href="assets/athena-icon-128.png" />
@@ -93,7 +93,7 @@
               Most AI tools wake up with amnesia. <strong>Athena</strong> is an ecosystem of
               open&#8209;source, local&#8209;first tools that keep durable memory of your work —
               a desktop command room for coding agents, a terminal agent that recalls past
-              sessions, a mobile companion, and system&#8209;wide voice dictation.
+              sessions, a deterministic multi&#8209;agent orchestration loop, and system&#8209;wide voice dictation.
               Memory, history, and orchestration stay on your machine — no LuckeySystems cloud required.
             </p>
             <div class="hero-actions reveal d3">
@@ -126,8 +126,8 @@
       <!-- ============ ticker ============ -->
       <div class="ticker" aria-hidden="true">
         <div class="ticker-track">
-          <span>ATHENA DESKTOP&ensp;✳&ensp;ATHENA CODE&ensp;✳&ensp;ATHENA MOBILE&ensp;✳&ensp;ATHENA WHISPER&ensp;✳&ensp;PERSISTENT MEMORY&ensp;✳&ensp;SESSION RECALL&ensp;✳&ensp;SOURCE-AVAILABLE&ensp;✳&ensp;NO LUCKEYSYSTEMS CLOUD&ensp;✳&ensp;CODEX · CLAUDE CODE · OPENCODE · HERMES&ensp;✳&ensp;</span>
-          <span>ATHENA DESKTOP&ensp;✳&ensp;ATHENA CODE&ensp;✳&ensp;ATHENA MOBILE&ensp;✳&ensp;ATHENA WHISPER&ensp;✳&ensp;PERSISTENT MEMORY&ensp;✳&ensp;SESSION RECALL&ensp;✳&ensp;SOURCE-AVAILABLE&ensp;✳&ensp;NO LUCKEYSYSTEMS CLOUD&ensp;✳&ensp;CODEX · CLAUDE CODE · OPENCODE · HERMES&ensp;✳&ensp;</span>
+          <span>ATHENA DESKTOP&ensp;✳&ensp;ATHENA CODE&ensp;✳&ensp;ATHENA LOOPS&ensp;✳&ensp;ATHENA WHISPER&ensp;✳&ensp;PERSISTENT MEMORY&ensp;✳&ensp;SESSION RECALL&ensp;✳&ensp;SOURCE-AVAILABLE&ensp;✳&ensp;NO LUCKEYSYSTEMS CLOUD&ensp;✳&ensp;CODEX · CLAUDE CODE · OPENCODE · HERMES&ensp;✳&ensp;</span>
+          <span>ATHENA DESKTOP&ensp;✳&ensp;ATHENA CODE&ensp;✳&ensp;ATHENA LOOPS&ensp;✳&ensp;ATHENA WHISPER&ensp;✳&ensp;PERSISTENT MEMORY&ensp;✳&ensp;SESSION RECALL&ensp;✳&ensp;SOURCE-AVAILABLE&ensp;✳&ensp;NO LUCKEYSYSTEMS CLOUD&ensp;✳&ensp;CODEX · CLAUDE CODE · OPENCODE · HERMES&ensp;✳&ensp;</span>
         </div>
       </div>
 
@@ -202,20 +202,20 @@
           <article class="product">
             <header>
               <span class="p-num">03</span>
-              <span class="px-label p-kind">POCKET · COMPANION</span>
+              <span class="px-label p-kind">ORCHESTRATION · AGENT LOOP</span>
             </header>
-            <h3>ATHENA<span class="gold">_</span>MOBILE</h3>
-            <p>Your workshop, from the couch. A PWA companion that reaches the Athena
-            desktop over <b>Tailscale</b> — served from loopback and published privately
-            over your tailnet, with a same-origin proxy into Athena's localhost-only
-            backend. Check on agents and sessions from your phone while the work stays on
-            your machine, off the public internet.</p>
+            <h3>ATHENA<span class="gold">_</span>LOOPS</h3>
+            <p>A deterministic harness for multi-agent work. Loops decomposes a goal into
+            subtasks, runs worker agents in <b>parallel</b>, then gates the results through a
+            reviewer that repeats until they pass. The control flow is real code, not a
+            prompt — and the same loop drives whichever backend you bring: <b>Claude, Codex,
+            OpenCode, or aider</b>. Ships as an MCP server and a CLI.</p>
             <ul class="p-tags">
-              <li>PWA</li><li>TYPESCRIPT</li><li>TAILSCALE</li><li>VITE</li>
+              <li>PYTHON</li><li>MCP</li><li>CLI</li><li>MULTI-BACKEND</li>
             </ul>
             <footer>
-              <span class="px-label dim">ANY PHONE, YOUR TAILNET</span>
-              <a href="https://github.com/luckeyfaraday/athena-mobile" target="_blank" rel="noopener">REPO&nbsp;↗</a>
+              <span class="px-label dim">ORCHESTRATOR → WORKER → REVIEWER</span>
+              <a href="https://github.com/luckeyfaraday/athena-loops" target="_blank" rel="noopener">REPO&nbsp;↗</a>
             </footer>
           </article>
 
@@ -268,6 +268,10 @@
           <a class="eco-cell" href="https://github.com/luckeyfaraday/OpenGolem" target="_blank" rel="noopener">
             <span class="eco-name">OpenGolem</span>
             <span class="eco-desc">Open-source desktop AI coding agent with OAuth, workspace isolation, skills, and MCP.</span>
+          </a>
+          <a class="eco-cell" href="https://github.com/luckeyfaraday/athena-mobile" target="_blank" rel="noopener">
+            <span class="eco-name">athena-mobile</span>
+            <span class="eco-desc">PWA companion that reaches the Athena desktop over Tailscale — check on agents and sessions from your phone, work stays on your machine.</span>
           </a>
           <a class="eco-cell" href="https://github.com/luckeyfaraday?tab=repositories" target="_blank" rel="noopener">
             <span class="eco-name">+ everything else</span>
@@ -396,14 +400,14 @@
           <span class="px-label gold">PRODUCTS</span>
           <a href="https://github.com/luckeyfaraday/Athena" target="_blank" rel="noopener">Athena Desktop</a>
           <a href="https://github.com/luckeyfaraday/athena-code" target="_blank" rel="noopener">Athena Code</a>
-          <a href="https://github.com/luckeyfaraday/athena-mobile" target="_blank" rel="noopener">Athena Mobile</a>
+          <a href="https://github.com/luckeyfaraday/athena-loops" target="_blank" rel="noopener">Athena Loops</a>
           <a href="https://github.com/luckeyfaraday/athena-whisper" target="_blank" rel="noopener">Athena Whisper</a>
         </div>
         <div class="footer-col">
           <span class="px-label gold">ECOSYSTEM</span>
           <a href="https://github.com/luckeyfaraday/sessions-search" target="_blank" rel="noopener">sessions-search</a>
           <a href="https://github.com/luckeyfaraday/ambient-ai" target="_blank" rel="noopener">ambient-ai</a>
-          <a href="https://github.com/luckeyfaraday/athena-usage-tracker" target="_blank" rel="noopener">usage-tracker</a>
+          <a href="https://github.com/luckeyfaraday/athena-mobile" target="_blank" rel="noopener">athena-mobile</a>
           <a href="https://github.com/luckeyfaraday/OpenGolem" target="_blank" rel="noopener">OpenGolem</a>
         </div>
         <div class="footer-col">
