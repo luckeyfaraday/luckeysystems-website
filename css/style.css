@@ -431,7 +431,12 @@ h1 em {
   transition: background 0.2s;
 }
 .product:nth-child(2n) { border-right: none; }
-.product:nth-child(n + 3) { border-bottom: none; }
+.product:nth-child(3), .product:nth-child(4) { border-bottom: var(--hairline); }
+.product--featured {
+  grid-column: 1 / -1;
+  border-right: none;
+  border-bottom: none;
+}
 .product:hover { background: var(--paper-deep); }
 .product:hover .p-num { color: var(--gold-deep); }
 
@@ -439,6 +444,17 @@ h1 em {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.product--featured header .p-kind { margin-left: auto; }
+.p-badge {
+  align-self: center;
+  padding: 0.28rem 0.6rem;
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  color: var(--gold-deep);
+  white-space: nowrap;
 }
 .p-num {
   font-family: var(--font-px);
