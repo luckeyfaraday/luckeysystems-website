@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<style>
+  @font-face {
+    font-family: "Chakra Petch";
+    font-weight: 500;
+    src: url("../../jarvis/fonts/chakra-petch-500.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Chakra Petch";
+    font-weight: 600;
+    src: url("../../jarvis/fonts/chakra-petch-600.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "IBM Plex Mono";
+    font-weight: 400;
+    src: url("../../jarvis/fonts/ibm-plex-mono-400.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "IBM Plex Mono";
+    font-weight: 500;
+    src: url("../../jarvis/fonts/ibm-plex-mono-500.woff2") format("woff2");
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+
+  body {
+    background:
+      radial-gradient(900px 560px at 78% 50%, #081120, #050a12 72%),
+      #050a12;
+    color: #b8cfdd;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 64px 72px 56px;
+    position: relative;
+  }
+
+  .corner { position: absolute; width: 26px; height: 26px; color: #66e0ff; opacity: 0.4; }
+  .corner.tl { top: 28px; left: 28px; border-top: 2px solid; border-left: 2px solid; }
+  .corner.tr { top: 28px; right: 28px; border-top: 2px solid; border-right: 2px solid; }
+  .corner.bl { bottom: 28px; left: 28px; border-bottom: 2px solid; border-left: 2px solid; }
+  .corner.br { bottom: 28px; right: 28px; border-bottom: 2px solid; border-right: 2px solid; }
+
+  .reticle {
+    position: absolute;
+    right: 96px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .kicker {
+    font-size: 20px;
+    letter-spacing: 0.30em;
+    color: #66e0ff;
+    text-transform: uppercase;
+  }
+
+  .mid { max-width: 760px; position: relative; z-index: 1; }
+
+  h1 {
+    font-family: "Chakra Petch", "Avenir Next", sans-serif;
+    font-weight: 600;
+    font-size: 118px;
+    line-height: 1;
+    letter-spacing: 0.06em;
+    color: #eaf8ff;
+  }
+
+  .tagline {
+    margin-top: 28px;
+    font-size: 30px;
+    line-height: 1.4;
+    color: #b8cfdd;
+  }
+  .tagline em { font-style: normal; color: #66e0ff; }
+
+  .bottom {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    font-size: 21px;
+    letter-spacing: 0.14em;
+    color: #6d8899;
+  }
+  .rule { flex: 1; height: 1px; background: #ffffff14; }
+  .bottom .local { color: #66e0ff; }
+</style>
+</head>
+<body>
+  <div class="corner tl"></div><div class="corner tr"></div>
+  <div class="corner bl"></div><div class="corner br"></div>
+
+  <svg class="reticle" width="360" height="360" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="16" cy="16" r="14.5" fill="none" stroke="#66e0ff" stroke-width="0.35" opacity=".25"/>
+    <circle cx="16" cy="16" r="13" fill="none" stroke="#66e0ff" stroke-width="0.7" opacity=".5"/>
+    <circle cx="16" cy="16" r="7" fill="none" stroke="#66e0ff" stroke-width="0.9"/>
+    <circle cx="16" cy="16" r="2.5" fill="#eaf8ff"/>
+    <line x1="16" y1="0.5" x2="16" y2="5" stroke="#66e0ff" stroke-width="0.4" opacity=".5"/>
+    <line x1="16" y1="27" x2="16" y2="31.5" stroke="#66e0ff" stroke-width="0.4" opacity=".5"/>
+    <line x1="0.5" y1="16" x2="5" y2="16" stroke="#66e0ff" stroke-width="0.4" opacity=".5"/>
+    <line x1="27" y1="16" x2="31.5" y2="16" stroke="#66e0ff" stroke-width="0.4" opacity=".5"/>
+  </svg>
+
+  <div class="kicker">LuckeySystems</div>
+
+  <div class="mid">
+    <h1>JARVIS AI</h1>
+    <p class="tagline">Voice copilot for coding agents. Runs Claude&nbsp;Code, Codex, Aider &amp; OpenCode hands-free — <em>raw audio stays local</em>.</p>
+  </div>
+
+  <div class="bottom">
+    <span>JARVIS.LUCKEYSYSTEMS.COM</span>
+    <span class="rule"></span>
+    <span class="local">VOICE // LOCAL-FIRST</span>
+  </div>
+</body>
+</html>

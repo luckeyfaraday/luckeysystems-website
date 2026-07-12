@@ -1,0 +1,65 @@
+/* Shared base for Athena-family OG cards — 1200x630 */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body { width: 1200px; height: 630px; overflow: hidden; }
+
+body {
+  font-family: "Bricolage Grotesque", "Helvetica Neue", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 64px 72px 56px;
+  position: relative;
+}
+
+.corner {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  opacity: 0.55;
+}
+.corner.tl { top: 28px; left: 28px; border-top: 2px solid; border-left: 2px solid; }
+.corner.tr { top: 28px; right: 28px; border-top: 2px solid; border-right: 2px solid; }
+.corner.bl { bottom: 28px; left: 28px; border-bottom: 2px solid; border-left: 2px solid; }
+.corner.br { bottom: 28px; right: 28px; border-bottom: 2px solid; border-right: 2px solid; }
+
+.top {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.top svg { display: block; }
+
+.kicker {
+  font-family: "Silkscreen", monospace;
+  font-size: 21px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.mid { max-width: 980px; }
+
+h1 {
+  font-size: 96px;
+  line-height: 1.02;
+  font-weight: 640;
+  letter-spacing: -0.015em;
+}
+
+.tagline {
+  margin-top: 26px;
+  font-size: 34px;
+  line-height: 1.35;
+  font-weight: 380;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 22px;
+  letter-spacing: 0.14em;
+}
+
+.rule { flex: 1; height: 1px; }
