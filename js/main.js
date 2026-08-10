@@ -55,6 +55,38 @@
     });
   }
 
+  /* ---------- live Jarvis offer ----------
+     The page ships a correct, server-rendered price, so this only ever refines
+     it: it keeps the founding tier current as it steps ($99 -> $199 -> ...) and
+     surfaces how many licences are left. Every failure path deliberately leaves
+     the static markup alone rather than blanking a price. */
+
+  const setText = (attr, text) =>
+    document.querySelectorAll(`[data-${attr}]`).forEach((el) => { el.textContent = text; });
+
+  fetch("https://jarvis.luckeysystems.com/api/offer", {
+    headers: { Accept: "application/json" },
+    cache: "no-store",
+  })
+    .then((res) => {
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return res.json();
+    })
+    .then((offer) => {
+      if (typeof offer.currentPrice !== "number") return;
+
+      setText("jarvis-price", ` — $${offer.currentPrice}`);
+      setText(
+        "jarvis-note",
+        offer.remainingInTier === null
+          ? "STANDARD PRICE"
+          : `${offer.remainingInTier} LEFT AT $${offer.currentPrice}`
+      );
+    })
+    .catch(() => {
+      /* offline, blocked, or Jarvis is down — the hardcoded price stands */
+    });
+
   /* ---------- scroll reveals ---------- */
 
   const sections = document.querySelectorAll(".section, .closing, .ticker");
