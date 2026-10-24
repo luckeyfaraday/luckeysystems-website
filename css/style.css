@@ -720,7 +720,7 @@ h1 em {
 
 .company-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   border-top: var(--hairline);
   border-bottom: var(--hairline);
 }
@@ -734,7 +734,7 @@ h1 em {
   color: var(--ink);
   transition: background 0.15s;
 }
-.company-cell:nth-child(4n) { border-right: none; }
+.company-cell:nth-child(3n) { border-right: none; }
 .company-cell:hover { background: var(--ink); color: var(--paper); }
 .company-cell:hover .company-name { color: var(--gold); }
 .company-role { color: var(--gold-deep); }
@@ -1106,10 +1106,9 @@ h1 em {
   .foundation-inner { grid-template-columns: 1fr; gap: 2.5rem; }
   .jarvis-inner { grid-template-columns: 1fr; gap: 2.5rem; }
   .jarvis-figure { align-items: flex-start; }
-  .company-grid { grid-template-columns: 1fr 1fr; }
-  .company-cell { border-right: var(--hairline) !important; border-bottom: var(--hairline) !important; }
-  .company-cell:nth-child(2n) { border-right: none !important; }
-  .company-cell:nth-child(n + 3) { border-bottom: none !important; }
+  .company-grid { grid-template-columns: 1fr; }
+  .company-cell { border-right: none !important; border-bottom: var(--hairline) !important; }
+  .company-cell:last-child { border-bottom: none !important; }
 
   .proof-strip { grid-template-columns: 1fr 1fr; }
   .proof-cell { border-right: var(--hairline) !important; border-bottom: var(--hairline); }
