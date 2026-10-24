@@ -18,8 +18,6 @@ render() {
 render main.html         ../../assets/og-card.png
 render foundation.html   ../../foundation/assets/og-card.png
 render docs.html         ../../docs/public/og-card.png
-render solutions-es.html ../../solutions/assets/og-card-es.png
-render solutions-en.html ../../solutions/assets/og-card-en.png
 render jarvis.html       ../../jarvis/assets/og-card.png
 
 echo "Done. Remember: docs needs 'npm run build' to copy public/ into dist/."

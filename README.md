@@ -2,8 +2,8 @@
 
 Marketing site for **LuckeySystems** and the **Athena** ecosystem —
 Athena Desktop, Athena Code, Athena Loops, and Athena Whisper — with a
-company section linking the whole family: Jarvis (commercial voice copilot),
-Solutions (services), and the Foundation (stewardship, in formation).
+company section linking the whole family: Jarvis (commercial voice copilot)
+and the Foundation (stewardship, in formation).
 
 Static site, zero build step, zero dependencies, zero trackers.
 
@@ -17,7 +17,6 @@ assets/         Athena brand marks (synced from context-workspace/client/src/ass
 
 jarvis/         jarvis.luckeysystems.com      (nested repo — Jarvis product site)
 foundation/     foundation.luckeysystems.com  (nested repo — Foundation vision)
-solutions/      solutions.luckeysystems.com   (nested repo — services, ES + /en/)
 docs/           docs.luckeysystems.com        (nested repo — Astro Starlight docs)
 ```
 
