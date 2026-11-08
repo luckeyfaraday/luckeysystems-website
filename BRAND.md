@@ -19,7 +19,7 @@ copilot with AI agents, and I post every receipt: prompts, costs, failures and r
 - **The face is the X avatar**, the blue baby in a tuxedo raising a glass. The visitor just saw
   it on the profile, so seeing it again at the top of the page confirms they're in the right place.
 - **LuckeySystems is the label on the work** (the bench, the arcade and Jarvis), not a second
-  brand to explain. It's named once, in "Who I am".
+  brand to explain. It's named once, at the end of "The story".
 - "Luckey Faraday" is the only name used. Nothing on the page, in the assets or in the metadata
   identifies the person behind the persona. The contact address is the persona's proton.me address.
 
@@ -33,16 +33,25 @@ copilot with AI agents, and I post every receipt: prompts, costs, failures and r
    The right half is night navy: *"Or use what I built."*, the live Jarvis orb, $99 once and
    **Buy Jarvis**. The headline is the offer: each phrase sits over the product it describes.
    On a 1280×800 laptop, both prices and both buttons are above the fold.
-3. **Proof.** "Every build ships with its receipts." The AK-47 four-model clip, the prompt word
+3. **As seen in.** A thin strip right under the doors: New York Post, Tom's Hardware, GuruGamer
+   and GameRiv, set as words in the display face (no publisher logos), each linking to its
+   article, plus "Read the story ↓". It sits just under the fold on a laptop, as the first thing
+   past the offers.
+4. **Proof.** "Every build ships with its receipts." The AK-47 four-model clip, the prompt word
    for word, two numbers ($0.38 for the cheapest rifle; Sonnet used 18× Sol's tokens), counts
    (68 games, 27 models, 49 repos, 368 stars) and four game cards that link into the arcade.
-4. **AI Builders in full** (coral band). What the community teaches, your first hour, the
+5. **AI Builders in full** (coral band). What the community teaches, your first hour, the
    60-second starter walkthrough video, the six things members get, and the price again.
-5. **Jarvis in full** (night band). What it does, local by default, pay once, platforms, and the
+6. **Jarvis in full** (night band). What it does, local by default, pay once, platforms, and the
    price again.
-6. **Who I am.** A large avatar, the story in two sentences, and the open books
-   (Jarvis $99 total revenue, AI Builders $360 annual run rate).
-7. **Two ways in.** One coral card and one cyan card, the same two calls to action.
+7. **The story** (replaces "Who I am"). *"I started a trend. Activision ended it."* A dated
+   timeline in his voice: **Aug 29** I started the AI browser ports (157K views on the first
+   post) · **Sep 17** then I started game mixing, Black Ops 2 running natively inside Minecraft
+   (862K views) · **Oct 9** Activision DMCA'd me, an ink card with 13 "withheld" post stubs and a
+   link to his still-live post about it (203K views) · **Now** I build my own, linking down to
+   the two offers. Then four press cards with a verbatim line from each article, and the open
+   books (Jarvis $99 total revenue, AI Builders $360 annual run rate) with the X/YouTube links.
+8. **Two ways in.** One coral card and one cyan card, the same two calls to action.
 
 ## Identity: a fresh start
 
@@ -83,11 +92,19 @@ the type and the media:
 ## Risks and open items
 
 _My judgment, not rules you've set._
-- **DMCA.** @luckeyfaraday has one Activision strike (2026-10-09). The page shows nothing from
-  Call of Duty, claude-of-duty or vibeslops. Pastel Nuketown (an Activision map name) and the
+- **DMCA.** @luckeyfaraday has one Activision strike (2026-10-09). The story section names it in
+  text and links the press and his own reaction post
+  (`x.com/luckeyfaraday/status/2108722723849379986`, live on 2026-11-08), but shows no Call of
+  Duty image, clip or asset and links none of the ports. Pastel Nuketown (an Activision map name) and the
   trademarked-character runs (Mario, Mickey, Pokémon, Halo Ringfall) are left off on purpose. The
   **Whop listing itself** still has a "BROWSER PORTS — CALL OF DUTY" tile in its banner, and
   every Join button on this page links to that listing. Swap the tile out on Whop.
+- **Press links checked 2026-11-08:** NY Post (Shane Galvin, 2026-10-24), Tom's Hardware (Mark
+  Tyson, 2026-09-17), GuruGamer (John Drake, 2026-10-12) and GameRiv (Ali Ahmed Akib,
+  2026-10-11). TweakTown's takedown piece is left out because its bot wall blocked every read,
+  so it couldn't be checked for the real name. XDA and CharlieIntel couldn't be found.
+- **"I started" is his claim.** The press supports the timeline, but no article says in so many
+  words that he started either trend. Keep it in the first person.
 - **Whop sales copy** still lists Athena material among the member perks. Athena was retired on
   2026-11-07.
 - **Hardcoded numbers:** 68 games, 27 models, 49 repos, 368 stars, the $29.99 price and the open
@@ -100,5 +117,8 @@ _My judgment, not rules you've set._
 
 ## Keep out
 
-- The real name, anywhere.
+- The real name, anywhere. Every press link was read in full before linking, and none of them
+  prints it.
+- Call of Duty images, video, screenshots or assets, and links to the ports or to the struck
+  posts. The story tells it in text, the press links and the one surviving X post.
 - The consulting brand: no link, no mention.

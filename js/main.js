@@ -39,7 +39,7 @@
 
   if (!reduceMotion && "IntersectionObserver" in window) {
     const blocks = document.querySelectorAll(
-      ".sec-head, .bench, .counts, .shelf, .offer, .perks, .about-grid, .close-doors"
+      ".sec-head, .bench, .counts, .shelf, .offer, .perks, .story-head, .beat, .quotes, .story-foot, .close-doors"
     );
     const io = new IntersectionObserver(
       (entries) => {
