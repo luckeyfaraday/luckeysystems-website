@@ -58,12 +58,25 @@
     });
   }
 
-  /* ---------- hold poster frames for reduced motion ---------- */
+  /* ---------- videos: poster frames for reduced motion, otherwise play only on screen ---------- */
 
+  const videos = document.querySelectorAll("video[autoplay]");
   if (reduceMotion) {
-    document.querySelectorAll("video[autoplay]").forEach((v) => {
+    videos.forEach((v) => {
       v.removeAttribute("autoplay");
       v.pause();
     });
+  } else if ("IntersectionObserver" in window) {
+    // the orb plays twice on the page; offscreen copies stop decoding
+    const vio = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) e.target.play().catch(() => {});
+          else e.target.pause();
+        });
+      },
+      { rootMargin: "200px 0px" }
+    );
+    videos.forEach((v) => vio.observe(v));
   }
 })();

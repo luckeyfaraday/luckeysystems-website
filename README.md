@@ -15,7 +15,7 @@ index.html      the landing page (luckeysystems.com)
 css/style.css   white / ink, coral for the community, night + cyan for Jarvis; Archivo
 js/main.js      live Jarvis price from jarvis.luckeysystems.com/api/offer, scroll-in
 assets/luckey/     avatar, favicons, OG card
-assets/jarvis-orb/ the Jarvis orb clip (from the real HUD orb renderer)
+assets/jarvis-orb/ the Jarvis orb clip (the real orb renderer, recorded on a fixed 30 fps clock)
 assets/community/  the Arena FPS starter walkthrough members get
 assets/bench/      the AK-47 four-model head-to-head
 assets/arcade/     game screenshots from games.luckeysystems.com
