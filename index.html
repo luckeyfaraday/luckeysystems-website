@@ -1,608 +1,281 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#f3ede3" />
-  <title>LuckeySystems — Software Built With AI, Shipped With Receipts</title>
-  <meta name="description" content="LuckeySystems is a small engineering shop that builds software with AI agents and publishes the proof. Three lines: Jarvis AI, a lifetime-licensed voice copilot for coding agents; an arcade of 62 AI-built browser games with published prompts; and Athena, a free local-first toolkit that gives coding agents durable memory." />
-  <link rel="canonical" href="https://luckeysystems.com/" />
-  <meta property="og:title" content="LuckeySystems — Software Built With AI, Shipped With Receipts" />
-  <meta property="og:description" content="One small shop, three lines: Jarvis AI (buy), an arcade of 62 AI-built games (play), and the Athena toolkit (free). Every build in public." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://luckeysystems.com/" />
-  <meta property="og:site_name" content="LuckeySystems" />
-  <meta property="og:image" content="https://luckeysystems.com/assets/og-card-v2.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="LuckeySystems — software built with AI, shipped with receipts." />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="LuckeySystems — Software Built With AI, Shipped With Receipts" />
-  <meta name="twitter:description" content="One small shop, three lines: Jarvis AI (buy), an arcade of 62 AI-built games (play), and the Athena toolkit (free)." />
-  <meta name="twitter:image" content="https://luckeysystems.com/assets/og-card-v2.png" />
-  <meta name="twitter:image:alt" content="LuckeySystems — software built with AI, shipped with receipts." />
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/athena-icon-32.png" />
-  <link rel="icon" type="image/png" sizes="128x128" href="assets/athena-icon-128.png" />
-  <link rel="apple-touch-icon" href="assets/athena-app-icon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Luckey Faraday — Learn how I build with AI, or use what I built</title>
+    <meta name="description" content="I'm Luckey Faraday. I build games, tools and a voice copilot with AI agents, in public. Join AI Builders, my community on Whop, or get Jarvis AI, the voice copilot for coding agents." />
+    <link rel="canonical" href="https://luckeysystems.com/" />
 
-  <!-- ============ fixed atmosphere layers ============ -->
-  <div class="atmo atmo-grain" aria-hidden="true"></div>
-  <div class="atmo atmo-constellation" aria-hidden="true">
-    <svg viewBox="0 0 1400 900" preserveAspectRatio="xMidYMid slice">
-      <g class="const-lines" stroke="currentColor" stroke-width="1" opacity=".35">
-        <path d="M180 140 L460 90 L820 210 L1180 120 M460 90 L380 420 L820 210 M380 420 L160 640 L640 760 L1080 560 L1180 120 M640 760 L820 210 M1080 560 L1240 780" fill="none"/>
-      </g>
-      <g class="const-marks" fill="none" stroke="currentColor" stroke-linecap="round">
-        <g transform="translate(180 140) scale(.16)"><use href="#ast"/></g>
-        <g transform="translate(460 90) scale(.26) rotate(14)"><use href="#ast"/></g>
-        <g transform="translate(820 210) scale(.42) rotate(-9)"><use href="#ast"/></g>
-        <g transform="translate(1180 120) scale(.2)"><use href="#ast"/></g>
-        <g transform="translate(380 420) scale(.22) rotate(30)"><use href="#ast"/></g>
-        <g transform="translate(160 640) scale(.3) rotate(-20)"><use href="#ast"/></g>
-        <g transform="translate(640 760) scale(.18)"><use href="#ast"/></g>
-        <g transform="translate(1080 560) scale(.34) rotate(8)"><use href="#ast"/></g>
-        <g transform="translate(1240 780) scale(.14)"><use href="#ast"/></g>
-      </g>
-    </svg>
-  </div>
+    <meta property="og:title" content="Luckey Faraday — Learn how I build with AI, or use what I built" />
+    <meta property="og:description" content="Join AI Builders with Luckey ($29.99/mo on Whop) or get Jarvis AI, the voice copilot for coding agents ($99 founding price)." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://luckeysystems.com/" />
+    <meta property="og:site_name" content="Luckey Faraday" />
+    <meta property="og:image" content="https://luckeysystems.com/assets/luckey/og-card.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Luckey Faraday: learn how I build with AI agents, or use what I built." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@luckeyfaraday" />
+    <meta name="twitter:creator" content="@luckeyfaraday" />
+    <meta name="twitter:title" content="Luckey Faraday — Learn how I build with AI, or use what I built" />
+    <meta name="twitter:description" content="Join AI Builders with Luckey ($29.99/mo on Whop) or get Jarvis AI, the voice copilot for coding agents ($99 founding price)." />
+    <meta name="twitter:image" content="https://luckeysystems.com/assets/luckey/og-card.png" />
 
-  <!-- shared symbol: the LuckeySystems asterisk, centered on origin -->
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <defs>
-      <g id="ast" stroke-width="28">
-        <line x1="0" y1="-34" x2="0" y2="-86"/>
-        <line x1="0" y1="34" x2="0" y2="86"/>
-        <line x1="29.4" y1="-17" x2="74.5" y2="-43"/>
-        <line x1="29.4" y1="17" x2="74.5" y2="43"/>
-        <line x1="-29.4" y1="-17" x2="-74.5" y2="-43"/>
-        <line x1="-29.4" y1="17" x2="-74.5" y2="43"/>
-      </g>
-    </defs>
-  </svg>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/luckey/avatar-32.png" />
+    <link rel="apple-touch-icon" href="assets/luckey/avatar-180.png" />
 
-  <div class="frame">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-    <!-- ============ header ============ -->
-    <header class="site-header reveal">
-      <a class="brand" href="#top" aria-label="LuckeySystems home">
-        <svg class="brand-mark" viewBox="-110 -110 220 220" aria-hidden="true"><g stroke="currentColor" stroke-linecap="round"><use href="#ast"/></g></svg>
-        <span class="brand-name">LUCKEYSYSTEMS</span>
+  <body>
+    <!-- ============ who + the two offers ============ -->
+    <header class="intro">
+      <a class="intro-face" href="https://x.com/luckeyfaraday" target="_blank" rel="noopener" aria-label="Luckey Faraday on X">
+        <img src="assets/luckey/avatar.jpg" width="399" height="399" alt="Luckey Faraday's avatar: a blue baby in a tuxedo raising a glass" />
       </a>
-      <nav class="site-nav" id="site-nav" aria-label="Primary">
-        <a href="#company"><span class="nav-label">COMPANY</span><span class="cursor" aria-hidden="true"></span></a>
-        <a href="#jarvis"><span class="nav-label">JARVIS</span><span class="cursor" aria-hidden="true"></span></a>
-        <a href="#arcade"><span class="nav-label">ARCADE</span><span class="cursor" aria-hidden="true"></span></a>
-        <a href="#athena"><span class="nav-label">ATHENA</span><span class="cursor" aria-hidden="true"></span></a>
-        <a href="https://docs.luckeysystems.com"><span class="nav-label">DOCS&nbsp;↗</span><span class="cursor" aria-hidden="true"></span></a>
-      </nav>
-      <div class="header-meta">
-        <span class="px-label dim">BUILT WITH AI ✳ IN PUBLIC</span>
-        <a class="gh-link" href="https://github.com/luckeyfaraday" target="_blank" rel="noopener" aria-label="GitHub">
-          <svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
-        </a>
+      <div class="intro-text">
+        <p class="intro-hi">Hi, I'm Luckey Faraday.</p>
+        <p class="intro-line">I build games, tools and a voice copilot with AI agents, and I post every receipt: prompts, costs, failures and revenue.</p>
+        <p class="intro-offers">
+          <a class="chip chip--community" href="#door-community">Community · $29.99/mo</a>
+          <a class="chip chip--jarvis" href="#door-jarvis">Jarvis AI · <span data-jarvis-num>$99</span></a>
+        </p>
       </div>
-      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">MENU</button>
+      <nav class="intro-links" aria-label="Elsewhere">
+        <a href="https://x.com/luckeyfaraday" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M18.9 1.2h3.7l-8 9.2 9.4 12.4h-7.4l-5.8-7.6-6.6 7.6H.5l8.6-9.8L0 1.2h7.6l5.2 6.9 6.1-6.9Zm-1.3 19.4h2L6.5 3.3H4.3l13.3 17.3Z"/></svg>
+          <span>@luckeyfaraday</span>
+        </a>
+        <a href="https://youtube.com/@luckey_faraday" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z"/></svg>
+          <span>YouTube</span>
+        </a>
+        <a href="https://github.com/luckeyfaraday" target="_blank" rel="noopener">
+          <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+          <span>GitHub</span>
+        </a>
+      </nav>
     </header>
 
-    <!-- ============ hero ============ -->
-    <main id="top">
-      <section class="hero">
-        <div class="hero-grid">
-          <div class="hero-copy">
-            <p class="px-label gold-tag reveal">✳ ONE SMALL SHOP · THREE LINES · EVERY BUILD IN PUBLIC</p>
-            <h1 class="reveal d1">
-              BUILT WITH AI<span class="gold">.</span><br />
-              SHIPPED WITH <em>RECEIPTS<span class="gold">.</span></em>
-            </h1>
-            <p class="hero-sub reveal d2">
-              <strong>LuckeySystems</strong> is a one-person engineering shop that builds software
-              with AI agents and publishes the proof — prompts, source, and all. Three lines come
-              out of it: <strong>Jarvis&nbsp;AI</strong>, a voice copilot you buy once and own;
-              an <strong>arcade</strong> of 62 browser games, 30 of them written end-to-end by
-              frontier models with the prompts on file; and <strong>Athena</strong>, the free
-              local-first toolkit that does the work.
-            </p>
-            <div class="hero-actions reveal d3">
-              <a class="btn-solid" href="https://jarvis.luckeysystems.com/#founding" data-jarvis-cta>BUY JARVIS AI<span data-jarvis-price> — $99</span>&nbsp;↗</a>
-              <a class="btn-ghost" href="https://games.luckeysystems.com">PLAY THE ARCADE&nbsp;↗</a>
-              <span class="px-label dim hero-note"><span data-jarvis-note>FOUNDING PRICE</span> · LIFETIME LICENSE · NO SUBSCRIPTION</span>
-            </div>
+    <main>
+      <h1 class="sr-only">Luckey Faraday: learn how I build with AI agents, or use what I built.</h1>
+
+      <section class="doors" aria-label="What I offer">
+        <article class="door door--community" id="door-community">
+          <p class="door-tag">AI Builders with Luckey · my community on Whop</p>
+          <h2 class="door-title">Learn how<br />I build.</h2>
+          <a class="door-media door-media--games" href="#community" aria-label="More about AI Builders">
+            <img class="g1" src="assets/arcade/alpine-apex.jpg" width="640" height="360" alt="Alpine Apex: a red sports car racing through snowy mountains at sunset" />
+            <img class="g2" src="assets/arcade/feather-fury.jpg" width="640" height="360" alt="Feather Fury: a slingshot physics puzzler's title screen" />
+            <img class="g3" src="assets/arcade/bleatdown.jpg" width="640" height="360" alt="Bleatdown: a white goat beside a destructible red barn" />
+          </a>
+          <p class="door-copy">Start from a working AI-built game, change one thing, and get weekly feedback on what you build. The same habits carry over to apps, agents and automations.</p>
+          <div class="door-buy">
+            <p class="price"><span class="price-num">$29.99</span><span class="price-per">per month</span></p>
+            <a class="btn btn--ink" href="https://whop.com/luckeyfaraday/ai-builders-community-4e/?utm_source=luckeyfaraday" target="_blank" rel="noopener">Join AI Builders <span aria-hidden="true">↗</span></a>
           </div>
-          <div class="hero-figure reveal d2" aria-hidden="true">
-            <div class="spec-plate">
-              <svg class="plate-mark" viewBox="-130 -130 260 260"><g stroke="currentColor" stroke-linecap="round"><use href="#ast"/></g></svg>
-              <div class="plate-rule"></div>
-              <dl class="plate-data">
-                <div><dt>FIG.</dt><dd>001 — THE MARK</dd></div>
-                <div><dt>SHOP</dt><dd>LUCKEYSYSTEMS</dd></div>
-                <div><dt>LINES</dt><dd>04</dd></div>
-                <div><dt>PUBLIC REPOS</dt><dd>53</dd></div>
-                <div><dt>GAMES SHIPPED</dt><dd>62</dd></div>
-                <div><dt>CLOUD REQ.</dt><dd class="gold">NONE</dd></div>
+        </article>
+
+        <article class="door door--jarvis" id="door-jarvis">
+          <p class="door-tag">Jarvis AI · desktop app for Windows and Linux</p>
+          <h2 class="door-title">Or use what<br />I built.</h2>
+          <a class="door-media door-media--orb" href="#jarvis" aria-label="More about Jarvis AI">
+            <video src="assets/jarvis-orb/orb.mp4" poster="assets/jarvis-orb/orb.jpg" width="560" height="560" autoplay muted loop playsinline preload="metadata" aria-label="The Jarvis AI orb shifting between idle, hearing, thinking and speaking"></video>
+          </a>
+          <p class="door-copy">A voice copilot for your coding agents. Say what you want and Jarvis drives Claude Code, Codex, Aider and OpenCode, then reads the results back to you.</p>
+          <div class="door-buy">
+            <p class="price"><span class="price-num" data-jarvis-num>$99</span><span class="price-per">once · <span data-jarvis-note>founding price</span></span></p>
+            <a class="btn btn--cyan" href="https://jarvis.luckeysystems.com/#founding">Buy Jarvis <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+      </section>
+
+      <!-- ============ proof ============ -->
+      <section class="proof" id="receipts">
+        <div class="wrap">
+          <header class="sec-head">
+            <h2 class="display">Every build ships<br />with its receipts.</h2>
+            <p class="sec-lede">I give frontier models the same prompt at the same effort and film what each one builds, straight from its own output. Time, tokens and cost go underneath. Here, four models built the same rifle.</p>
+          </header>
+
+          <div class="bench">
+            <video class="bench-clip" src="assets/bench/ak47-four-models.mp4" poster="assets/bench/ak47-four-models.jpg" width="720" height="720" autoplay muted loop playsinline preload="metadata"
+              aria-label="Four AI-built 3D rifles firing side by side, labelled with each model's time, tokens and cost: GPT Astra 15m 51s, 688K tokens, $2.22; GPT 6.1 Sol 14m 22s, 648K tokens, $0.38; Sonnet 5.5 32m 48s, 11.8M tokens, $5.14; Opus 5.5 27m 04s, 2.77M tokens, $5.29."></video>
+            <div class="bench-notes">
+              <p class="bench-label">The prompt, word for word</p>
+              <blockquote class="bench-prompt">“Create a 3d model of a ak47 with the shooting animation in an html file where I can rotate and shoot the gun”</blockquote>
+              <dl class="bench-stats">
+                <div>
+                  <dt class="display">$0.38</dt>
+                  <dd>GPT-6.1 Sol built the cheapest rifle, and the fastest: 14m 22s.</dd>
+                </div>
+                <div>
+                  <dt class="display">18×</dt>
+                  <dd>the tokens Sonnet 5.5 burned next to Sol: 11.8M against 648K.</dd>
+                </div>
               </dl>
+              <p class="bench-method">All four ran at xhigh reasoning. Cost prices the logged tokens at API list rates, so it's an estimate, not a bill.</p>
+              <a class="text-link" href="https://x.com/luckeysystems" target="_blank" rel="noopener">Every head-to-head is on X at @luckeysystems <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+
+          <dl class="counts">
+            <div><dt class="display">68</dt><dd>games shipped, free to play in the browser</dd></div>
+            <div><dt class="display">27</dt><dd>AI models put through the bench</dd></div>
+            <div><dt class="display">49</dt><dd>open-source repos on GitHub</dd></div>
+            <div><dt class="display">368</dt><dd>GitHub stars, counted Nov 8, 2026</dd></div>
+          </dl>
+
+          <div class="shelf">
+            <a class="shelf-item" href="https://games.luckeysystems.com/games/ember-protocol/index.html">
+              <img src="assets/arcade/ember-protocol.jpg" width="640" height="360" loading="lazy" alt="Ember Protocol: a gold rifle facing glowing enemies by a fortress obelisk" />
+              <span class="shelf-title">Ember Protocol</span>
+              <span class="shelf-by">Ox Alpha · built over 19+ iterations</span>
+            </a>
+            <a class="shelf-item" href="https://games.luckeysystems.com/games/dune-apex/index.html">
+              <img src="assets/arcade/dune-apex.jpg" width="640" height="360" loading="lazy" alt="Dune Apex: a low-poly racer on a sunlit desert track" />
+              <span class="shelf-title">Dune Apex</span>
+              <span class="shelf-by">Qwen 3.8 Max Preview · one shot</span>
+            </a>
+            <a class="shelf-item" href="https://games.luckeysystems.com/games/black-hole/index.html">
+              <img src="assets/arcade/black-hole.jpg" width="640" height="360" loading="lazy" alt="Black Hole Journey: a violet nebula and a black hole in deep space" />
+              <span class="shelf-title">Black Hole Journey</span>
+              <span class="shelf-by">Claude Fable 5 · lensing shader</span>
+            </a>
+            <a class="shelf-item" href="https://games.luckeysystems.com/games/opelia-rift/index.html">
+              <img src="assets/arcade/opelia-rift.jpg" width="640" height="360" loading="lazy" alt="Opelia Rift: a galaxy with a crimson scar of light across its disc" />
+              <span class="shelf-title">Opelia Rift</span>
+              <span class="shelf-by">Claude Opus 5 · 1,200 star systems</span>
+            </a>
+          </div>
+          <p class="shelf-more">
+            <a class="text-link" href="https://games.luckeysystems.com">Play all 68 at games.luckeysystems.com <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="https://github.com/luckeyfaraday" target="_blank" rel="noopener">Read the code on GitHub <span aria-hidden="true">↗</span></a>
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ offer 1: the community ============ -->
+      <section class="band band--community" id="community">
+        <div class="wrap">
+          <div class="offer">
+            <div class="offer-text">
+              <p class="offer-tag">AI Builders with Luckey</p>
+              <h2 class="display">Turn one prompt into a game you can play.</h2>
+              <p>AI Builders is where I teach the workflow behind my games: take one AI prompt to a game you can run, play and improve, then learn to test it properly. Games are the starting point. The same build, test and review habits carry over to apps, agents and automations.</p>
+              <p class="offer-first"><strong>Your first hour:</strong> run the Arena FPS starter, try its original prompt, make one small change, and share what you tested.</p>
+              <div class="offer-buy">
+                <p class="price"><span class="price-num">$29.99</span><span class="price-per">per month, on Whop</span></p>
+                <a class="btn btn--ink" href="https://whop.com/luckeyfaraday/ai-builders-community-4e/?utm_source=luckeyfaraday" target="_blank" rel="noopener">Join AI Builders <span aria-hidden="true">↗</span></a>
+              </div>
+              <a class="text-link" href="https://games.luckeysystems.com/games/arena-fps/index.html">Play the starter game free first <span aria-hidden="true">↗</span></a>
+            </div>
+            <figure class="offer-media">
+              <video src="assets/community/starter-walkthrough.mp4" poster="assets/community/starter-walkthrough.jpg" width="1280" height="720" autoplay muted loop playsinline preload="metadata" aria-label="The Arena FPS starter walkthrough: play the included game, generate a separate copy, change one thing, show your evidence"></video>
+              <figcaption>The 60-second starter walkthrough, from inside the community.</figcaption>
+            </figure>
+          </div>
+
+          <h3 class="perks-head">What members get</h3>
+          <ul class="perks">
+            <li><strong>The Arena FPS starter</strong> Working files, setup, troubleshooting, reusable review prompts and a short video walkthrough.</li>
+            <li><strong>Weekly build feedback</strong> Post a link or a screenshot, what you tested and one question, and get a practical next step. No live call needed.</li>
+            <li><strong>Two guides</strong> Build Your First AI Game, and Build Your First AAA Game.</li>
+            <li><strong>Playable examples</strong> Real games with screenshots, provenance and exercises.</li>
+            <li><strong>My iteration loops</strong> The 24h and 48h loops, master-workflow, and the skills and tools material.</li>
+            <li><strong>Builder Chat and Gaming Lab</strong> A place for questions and experiments.</li>
+          </ul>
+          <p class="perks-note">The starter runs without an AI subscription. Generating your own version needs the AI tool you already use.</p>
+        </div>
+      </section>
+
+      <!-- ============ offer 2: Jarvis ============ -->
+      <section class="band band--jarvis" id="jarvis">
+        <div class="wrap">
+          <div class="offer offer--flip">
+            <figure class="orb-stage">
+              <video src="assets/jarvis-orb/orb.mp4" poster="assets/jarvis-orb/orb.jpg" width="560" height="560" autoplay muted loop playsinline preload="metadata" aria-label="The Jarvis AI orb moving through its muted, idle, hearing, thinking and speaking states"></video>
+              <figcaption>The real Jarvis orb: muted, idle, hearing, thinking, speaking.</figcaption>
+            </figure>
+            <div class="offer-text">
+              <p class="offer-tag">Jarvis AI</p>
+              <h2 class="display">Talk to your coding agents.</h2>
+              <p>Speak your intent and Jarvis drives Claude Code, Codex, Aider and OpenCode. It dictates tasks, steers sessions by name, approves or interrupts runs hands-free, and reads the results back to you.</p>
+              <ul class="facts">
+                <li><strong>Local by default.</strong> Raw microphone audio and webcam frames stay on your machine. Only conversation text reaches the model provider you set up. Realtime speech-to-speech, such as Grok Voice, is an opt-in exception that sends audio to that provider under your own account.</li>
+                <li><strong>Pay once.</strong> A numbered founding license and updates for as long as Jarvis is developed. A full refund within 24 hours.</li>
+                <li><strong>Runs on</strong> 64-bit Windows 10/11 and 64-bit Linux on X11. No macOS, ARM or Wayland-only sessions yet.</li>
+              </ul>
+              <div class="offer-buy">
+                <p class="price"><span class="price-num" data-jarvis-num>$99</span><span class="price-per">once · <span data-jarvis-note>founding price</span></span></p>
+                <a class="btn btn--cyan" href="https://jarvis.luckeysystems.com/#founding">Buy Jarvis <span aria-hidden="true">↗</span></a>
+              </div>
+              <a class="text-link" href="https://jarvis.luckeysystems.com">The full Jarvis page <span aria-hidden="true">↗</span></a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ============ proof strip ============ -->
-      <section class="proof-strip" aria-label="LuckeySystems by the numbers">
-        <div class="proof-cell">
-          <span class="proof-num">62</span>
-          <span class="px-label proof-label">GAMES SHIPPED</span>
-          <span class="proof-sub">30 written entirely by models, prompts published</span>
-        </div>
-        <div class="proof-cell">
-          <span class="proof-num">53</span>
-          <span class="px-label proof-label">PUBLIC REPOS</span>
-          <span class="proof-sub">Original, readable, forkable — 61 counting forks</span>
-        </div>
-        <div class="proof-cell">
-          <span class="proof-num">13</span>
-          <span class="px-label proof-label">MODELS BENCHED</span>
-          <span class="proof-sub">Claude, GPT, Qwen, DeepSeek, Grok, Gemini &amp; more</span>
-        </div>
-        <div class="proof-cell">
-          <span class="proof-num">01</span>
-          <span class="px-label proof-label">PRODUCT FOR SALE</span>
-          <span class="proof-sub">Jarvis AI — one payment, yours for good</span>
-        </div>
-      </section>
-
-      <!-- ============ company: the three lines ============ -->
-      <section id="company" class="section">
-        <div class="section-head">
-          <span class="px-label">COMPANY</span>
-          <span class="px-label dim">FIG. 002 — ONE WORKSHOP, THREE LINES</span>
-        </div>
-        <p class="company-lead">The same machinery ships three ways. <strong>One product you buy</strong>,
-        <strong>one arcade you play</strong>, and <strong>one toolkit that's free</strong> —
-        with a foundation being formed to steward the open
-        parts when they outgrow me.</p>
-        <div class="company-grid">
-          <a class="company-cell" href="#jarvis">
-            <span class="px-label company-role">COMMERCIAL PRODUCT <span class="line-verb">BUY</span></span>
-            <span class="company-name">JARVIS AI</span>
-            <span class="company-desc">A voice copilot that runs Claude Code, Codex, Aider and OpenCode hands-free. One payment, lifetime license, no subscription. This is the line that funds the rest.</span>
-          </a>
-          <a class="company-cell" href="#arcade">
-            <span class="px-label company-role">THE ARCADE <span class="line-verb">PLAY</span></span>
-            <span class="company-name">GAMES</span>
-            <span class="company-desc">62 browser games, free to play. 30 are one-shot model output with the prompt and model on record; 32 are built here. The proof that the method works.</span>
-          </a>
-          <a class="company-cell" href="#athena">
-            <span class="px-label company-role">OPEN TOOLKIT <span class="line-verb free">FREE</span></span>
-            <span class="company-name">ATHENA</span>
-            <span class="company-desc">Four local-first tools that give AI coding agents durable memory. MIT and source-available, free to run forever. The machinery behind everything else here.</span>
-          </a>
-        </div>
-      </section>
-
-      <!-- ============ jarvis: the commercial line ============ -->
-      <section id="jarvis" class="section jarvis-band">
-        <div class="section-head">
-          <span class="px-label">LINE 01 — BUY</span>
-          <span class="px-label dim">FIG. 003 — THE PRODUCT THAT PAYS FOR THE OPEN ONES</span>
-        </div>
-        <div class="jarvis-inner">
-          <div class="jarvis-copy">
-            <p class="px-label jarvis-kind">VOICE · COPILOT FOR CODING AGENTS <span class="jarvis-badge">PROPRIETARY</span></p>
-            <h2>JARVIS<span class="jarvis-accent">_</span>AI</h2>
-            <p>Speak your intent and Jarvis drives <b>Claude Code, Codex, Aider, and OpenCode</b> —
-            dictating tasks, steering sessions by name, approving or interrupting runs hands-free,
-            and reading results back to you. By default, raw microphone audio and webcam frames
-            stay on your machine — only conversation text reaches the model provider you
-            configured. Realtime speech-to-speech, such as Grok Voice, is an opt-in exception
-            that sends audio to that provider under your own account.</p>
-            <ul class="p-tags jarvis-tags">
-              <li>VOICE-NATIVE</li><li>LOCAL BY DEFAULT</li><li>MULTI-AGENT</li><li>LIFETIME LICENSE</li>
-            </ul>
-            <div class="jarvis-actions">
-              <a class="btn-solid jarvis-btn" href="https://jarvis.luckeysystems.com/#founding" data-jarvis-cta>BUY NOW<span data-jarvis-price> — $99</span>&nbsp;↗</a>
-              <span class="px-label dim">ONE PAYMENT · UPDATES FOR LIFE · 24-HOUR REFUND</span>
-            </div>
-          </div>
-          <div class="jarvis-figure" aria-hidden="true">
-            <div class="jarvis-orb">
-              <span class="jarvis-ring r1"></span>
-              <span class="jarvis-ring r2"></span>
-              <span class="jarvis-core"></span>
-            </div>
-            <p class="px-label jarvis-hud-label">CYAN: WORKING ✳ AMBER: NEEDS YOU</p>
-          </div>
-        </div>
-
-        <div class="ladder-block">
-          <p class="px-label ladder-title">THE FOUNDING 100 — EVERY STEP IS PERMANENT</p>
-          <div class="ladder" aria-hidden="true">
-            <div class="ladder-step"><span class="ladder-bar" style="--p:26px"></span><span class="ladder-price">$49</span><span class="ladder-units">×5</span></div>
-            <div class="ladder-step"><span class="ladder-bar" style="--p:33px"></span><span class="ladder-price">$99</span><span class="ladder-units">×5</span></div>
-            <div class="ladder-step"><span class="ladder-bar" style="--p:46px"></span><span class="ladder-price">$199</span><span class="ladder-units">×5</span></div>
-            <div class="ladder-step"><span class="ladder-bar" style="--p:59px"></span><span class="ladder-price">$299</span><span class="ladder-units">×5</span></div>
-            <div class="ladder-step"><span class="ladder-bar" style="--p:72px"></span><span class="ladder-price">$399</span><span class="ladder-units">×10</span></div>
-            <div class="ladder-step"><span class="ladder-bar" style="--p:85px"></span><span class="ladder-price">$499</span><span class="ladder-units">×15</span></div>
-            <div class="ladder-step"><span class="ladder-bar" style="--p:98px"></span><span class="ladder-price">$599</span><span class="ladder-units">×15</span></div>
-            <div class="ladder-step"><span class="ladder-bar" style="--p:111px"></span><span class="ladder-price">$699</span><span class="ladder-units">×15</span></div>
-            <div class="ladder-step"><span class="ladder-bar" style="--p:124px"></span><span class="ladder-price">$799</span><span class="ladder-units">×15</span></div>
-            <div class="ladder-step"><span class="ladder-bar" style="--p:137px"></span><span class="ladder-price">$899</span><span class="ladder-units">×10</span></div>
-            <div class="ladder-step std"><span class="ladder-bar" style="--p:150px"></span><span class="ladder-price">$999</span><span class="ladder-units">STD</span></div>
-          </div>
-          <p class="ladder-note">The first 100 licenses are numbered and priced in ascending steps,
-          starting at <b>$49</b> for waitlist members. When a step sells out its price never comes
-          back. From customer 101 the standard lifetime price is <b>$999</b>. Every tier is the same
-          product and the same lifetime terms — only the number on your license changes.
-          <a href="https://jarvis.luckeysystems.com/#founding">See the current step and what's left ↗</a></p>
-        </div>
-      </section>
-
-      <!-- ============ arcade ============ -->
-      <section id="arcade" class="section">
-        <div class="section-head">
-          <span class="px-label">LINE 02 — PLAY</span>
-          <span class="px-label dim">FIG. 004 — 62 GAMES · FREE IN YOUR BROWSER · NOTHING TO INSTALL</span>
-        </div>
-        <p class="company-lead">Every game here runs in a browser tab and costs nothing. 30 of them
-        are the point: a <strong>frontier model was handed one prompt and shipped verbatim</strong>,
-        no human edits and no second takes, with the prompt, model, and reasoning level published
-        next to the game. It's a benchmark you can play — and the loudest evidence that the way this
-        shop builds software actually works.</p>
-
-        <div class="arcade-grid">
-          <a class="arcade-cell" href="https://games.luckeysystems.com/games/pastel-nuketown/index.html">
-            <img src="assets/arcade/pastel-nuketown.jpg" width="640" height="360" loading="lazy" decoding="async" alt="Pastel Nuketown — a pastel-coloured arena shooter map" />
-            <span class="arcade-meta">
-              <span class="arcade-title">PASTEL NUKETOWN <span class="tier-pill studio">STUDIO</span></span>
-              <span class="arcade-by">Arena shooter · built here with Claude Opus 5</span>
-            </span>
-          </a>
-          <a class="arcade-cell" href="https://games.luckeysystems.com/games/opelia-rift/index.html">
-            <img src="assets/arcade/opelia-rift.jpg" width="640" height="360" loading="lazy" decoding="async" alt="Opelia Rift — an exploration game generated by Claude Opus 5" />
-            <span class="arcade-meta">
-              <span class="arcade-title">OPELIA RIFT <span class="tier-pill bench">BENCH</span></span>
-              <span class="arcade-by">Exploration · one shot, Claude Opus 5</span>
-            </span>
-          </a>
-          <a class="arcade-cell" href="https://games.luckeysystems.com/games/aurelia-rift/index.html">
-            <img src="assets/arcade/aurelia-rift.jpg" width="640" height="360" loading="lazy" decoding="async" alt="Aurelia Rift: a spiral galaxy of points with a warm current running through it" />
-            <span class="arcade-meta">
-              <span class="arcade-title">AURELIA RIFT <span class="tier-pill studio">STUDIO</span></span>
-              <span class="arcade-by">Exploration · built here with Claude Fable 5</span>
-            </span>
-          </a>
-          <a class="arcade-cell" href="https://games.luckeysystems.com/games/black-hole/index.html">
-            <img src="assets/arcade/black-hole.jpg" width="640" height="360" loading="lazy" decoding="async" alt="Black Hole Journey — a cinematic flight through a black hole" />
-            <span class="arcade-meta">
-              <span class="arcade-title">BLACK HOLE JOURNEY <span class="tier-pill studio">STUDIO</span></span>
-              <span class="arcade-by">Cinematic flight · built here with Claude Fable 5</span>
-            </span>
-          </a>
-          <a class="arcade-cell" href="https://games.luckeysystems.com/games/halo-ringfall/index.html">
-            <img src="assets/arcade/halo-ringfall.jpg" width="640" height="360" loading="lazy" decoding="async" alt="Halo Ringfall — a wave shooter generated by Qwen 3.8 Max Preview" />
-            <span class="arcade-meta">
-              <span class="arcade-title">HALO // RINGFALL <span class="tier-pill bench">BENCH</span></span>
-              <span class="arcade-by">Wave shooter · one shot, Qwen 3.8 Max Preview</span>
-            </span>
-          </a>
-          <a class="arcade-cell" href="https://games.luckeysystems.com/games/dune-apex/index.html">
-            <img src="assets/arcade/dune-apex.jpg" width="640" height="360" loading="lazy" decoding="async" alt="Dune Apex — a desert racing game" />
-            <span class="arcade-meta">
-              <span class="arcade-title">DUNE APEX <span class="tier-pill studio">STUDIO</span></span>
-              <span class="arcade-by">Racing · built here with AI</span>
-            </span>
-          </a>
-        </div>
-
-        <div class="arcade-legend">
-          <div class="legend-item">
-            <span class="tier-pill bench">BENCH</span>
-            <p><b>30 games.</b> One standardized prompt, one model, shipped exactly as written —
-            no human code, no retries. The prompt and model are published beside every entry.</p>
-          </div>
-          <div class="legend-item">
-            <span class="tier-pill studio">STUDIO</span>
-            <p><b>32 games.</b> Built in this shop with AI in the loop and a human steering.
-            Bigger, more finished, and honestly labelled as such.</p>
-          </div>
-          <div class="legend-item">
-            <span class="tier-pill community">COMMUNITY</span>
-            <p><b>Opening later.</b> A paid, reviewed tier for games you built and want hosted —
-            sandboxed, credited, and held to the same provenance rules.</p>
-          </div>
-        </div>
-
-        <div class="arcade-actions">
-          <a class="btn-solid" href="https://games.luckeysystems.com">OPEN THE ARCADE&nbsp;↗</a>
-          <span class="px-label dim">13 MODELS BENCHED ✳ FILTER THE GRID BY MODEL OR TIER</span>
-        </div>
-      </section>
-
-      <!-- ============ athena: the open toolkit ============ -->
-      <section id="athena" class="section">
-        <div class="section-head">
-          <span class="px-label">LINE 03 — FREE</span>
-          <span class="px-label dim">FIG. 005 — ATHENA: THE MACHINERY, 04 OPEN TOOLS</span>
-        </div>
-        <p class="company-lead">Most AI tools wake up with amnesia. <strong>Athena</strong> is the
-        local-first toolkit that fixes that — memory, recall, and orchestration that stay in files on
-        your disk. It's what the games and the client work get built with, and it will always be free
-        to run. <strong>Athena Code and Athena Loops are MIT</strong>; the rest is source-available.</p>
-
-        <div class="athena-install">
-          <div class="install-block">
-            <span class="px-label dim">INSTALL ATHENA CODE</span>
-            <div class="install-row">
-              <code id="install-cmd">curl -fsSL https://raw.githubusercontent.com/luckeyfaraday/athena-code/main/scripts/install.sh | bash</code>
-              <button class="copy-btn" data-copy="#install-cmd" aria-label="Copy install command">COPY</button>
-            </div>
-          </div>
-          <a class="btn-ghost" href="https://github.com/luckeyfaraday" target="_blank" rel="noopener">BROWSE THE SOURCE&nbsp;↗</a>
-        </div>
-
-        <div class="product-grid">
-
-          <article class="product">
-            <header>
-              <span class="p-num">01</span>
-              <span class="px-label p-kind">DESKTOP · COMMAND ROOM</span>
-              <span class="px-label p-badge">SOURCE-AVAILABLE</span>
-            </header>
-            <h3>ATHENA<span class="gold">_</span>DESKTOP</h3>
-            <p>A local command room for AI coding agents. One Electron app embeds native
-            terminals for <b>Codex, OpenCode, Claude Code, and Hermes</b>, resumes sessions
-            already on disk, generates bounded project handoffs, and keeps recall context
-            ready for the next fresh agent. MCP bridge included, so your agent can drive
-            the workspace itself.</p>
-            <ul class="p-tags">
-              <li>ELECTRON</li><li>REACT</li><li>FASTAPI</li><li>MCP</li><li>node-pty + xterm.js</li>
-            </ul>
-            <footer>
-              <span class="px-label dim">LINUX / WINDOWS / MACOS</span>
-              <a href="https://github.com/luckeyfaraday/Athena" target="_blank" rel="noopener">REPO&nbsp;↗</a>
-            </footer>
-          </article>
-
-          <article class="product">
-            <header>
-              <span class="p-num">02</span>
-              <span class="px-label p-kind">TERMINAL · CODING AGENT</span>
-              <span class="px-label p-badge">MIT</span>
-            </header>
-            <h3>ATHENA<span class="gold">_</span>CODE</h3>
-            <p>A terminal AI coding agent with <b>persistent local memory</b>. It saves stable
-            facts and decisions, automatically recalls what's relevant each turn, and
-            searches across every past session — without shipping your context to anyone.
-            A memory-focused fork of OpenCode with native <code>memory_write</code>,
-            <code>memory_read</code>, and <code>session_recall</code> tools.</p>
-            <ul class="p-tags">
-              <li>TYPESCRIPT</li><li>SQLITE FTS5</li><li>LOCAL-FIRST</li><li>x64 + ARM64</li>
-            </ul>
-            <footer>
-              <span class="px-label dim">LINUX / MACOS / WINDOWS</span>
-              <a href="https://github.com/luckeyfaraday/athena-code" target="_blank" rel="noopener">REPO&nbsp;↗</a>
-            </footer>
-          </article>
-
-          <article class="product">
-            <header>
-              <span class="p-num">03</span>
-              <span class="px-label p-kind">ORCHESTRATION · AGENT LOOP</span>
-              <span class="px-label p-badge">MIT</span>
-            </header>
-            <h3>ATHENA<span class="gold">_</span>LOOPS</h3>
-            <p>A deterministic harness for multi-agent work. Loops decomposes a goal into
-            subtasks, runs worker agents in <b>parallel</b>, then gates the results through a
-            reviewer that repeats until they pass. The control flow is real code, not a
-            prompt — and the same loop drives whichever backend you bring: <b>Claude, Codex,
-            OpenCode, or aider</b>. Ships as an MCP server and a CLI.</p>
-            <ul class="p-tags">
-              <li>PYTHON</li><li>MCP</li><li>CLI</li><li>MULTI-BACKEND</li>
-            </ul>
-            <footer>
-              <span class="px-label dim">ORCHESTRATOR → WORKER → REVIEWER</span>
-              <a href="https://github.com/luckeyfaraday/athena-loops" target="_blank" rel="noopener">REPO&nbsp;↗</a>
-            </footer>
-          </article>
-
-          <article class="product">
-            <header>
-              <span class="p-num">04</span>
-              <span class="px-label p-kind">VOICE · DICTATION</span>
-              <span class="px-label p-badge">SOURCE-AVAILABLE</span>
-            </header>
-            <h3>ATHENA<span class="gold">_</span>WHISPER</h3>
-            <p>Talk to any text field on your desktop. A floating always-on-top widget that
-            records, transcribes locally with <b>faster-whisper</b>, cleans up spoken
-            punctuation, and types the result into terminals, coding agents, browsers —
-            whatever has focus. The local-first answer to cloud dictation tools like
-            Wispr Flow.</p>
-            <ul class="p-tags">
-              <li>PYTHON</li><li>FASTER-WHISPER</li><li>PYQT</li><li>X11 / WAYLAND / WIN</li>
-            </ul>
-            <footer>
-              <span class="px-label dim">LOCAL BY DEFAULT</span>
-              <a href="https://github.com/luckeyfaraday/athena-whisper" target="_blank" rel="noopener">REPO&nbsp;↗</a>
-            </footer>
-          </article>
-
-        </div>
-      </section>
-
-      <!-- ============ terminal demo ============ -->
-      <section id="action" class="section">
-        <div class="section-head">
-          <span class="px-label">DEMO</span>
-          <span class="px-label dim">FIG. 006 — SEE IT IN ACTION: ATHENA CODE, SECOND SESSION</span>
-        </div>
-        <div class="terminal" data-terminal>
-          <div class="terminal-bar">
-            <span class="t-dot"></span><span class="t-dot"></span><span class="t-dot"></span>
-            <span class="t-title">~/projects/api-server — athena-code</span>
-            <span class="t-mem px-label">MEM: <b data-memcount>0</b> FACTS</span>
-          </div>
-          <pre class="terminal-body" data-screen aria-live="off"></pre>
-        </div>
-        <p class="caption">Athena Code freezes one deterministic memory snapshot per session, recalls related
-        facts on every turn, and indexes prior conversations — its own <em>and</em> your local Claude Code,
-        Codex, opencode, and Hermes histories — with SQLite FTS5.</p>
-      </section>
-
-      <!-- ============ ecosystem ============ -->
-      <section id="ecosystem" class="section">
-        <div class="section-head">
-          <span class="px-label">ECOSYSTEM</span>
-          <span class="px-label dim">THE WIDER BENCH — SUPPORTING REPOS</span>
-        </div>
-        <div class="eco-grid">
-          <a class="eco-cell" href="https://github.com/luckeyfaraday/sessions-search" target="_blank" rel="noopener">
-            <span class="eco-name">sessions-search</span>
-            <span class="eco-desc">Search across all your Codex, Claude Code, OpenCode and Hermes sessions.</span>
-          </a>
-          <a class="eco-cell" href="https://github.com/luckeyfaraday/ambient-ai" target="_blank" rel="noopener">
-            <span class="eco-name">ambient-ai</span>
-            <span class="eco-desc">Local context substrate — gathers ambient signals, compacts them, hands clean context to any agent.</span>
-          </a>
-          <a class="eco-cell" href="https://github.com/luckeyfaraday/athena-usage-tracker" target="_blank" rel="noopener">
-            <span class="eco-name">athena-usage-tracker</span>
-            <span class="eco-desc">Local dashboard for Codex and Claude Code usage limits.</span>
-          </a>
-          <a class="eco-cell" href="https://github.com/luckeyfaraday/hermes-mobile" target="_blank" rel="noopener">
-            <span class="eco-name">hermes-mobile</span>
-            <span class="eco-desc">Private PWA bridge for the Hermes gateway, with same-origin REST/SSE proxying.</span>
-          </a>
-          <a class="eco-cell" href="https://github.com/luckeyfaraday/OpenGolem" target="_blank" rel="noopener">
-            <span class="eco-name">OpenGolem</span>
-            <span class="eco-desc">Open-source desktop AI coding agent with OAuth, workspace isolation, skills, and MCP.</span>
-          </a>
-          <a class="eco-cell" href="https://github.com/luckeyfaraday/athena-mobile" target="_blank" rel="noopener">
-            <span class="eco-name">athena-mobile</span>
-            <span class="eco-desc">PWA companion that reaches the Athena desktop over Tailscale — check on agents and sessions from your phone, work stays on your machine.</span>
-          </a>
-          <a class="eco-cell" href="https://github.com/luckeyfaraday?tab=repositories" target="_blank" rel="noopener">
-            <span class="eco-name">+ everything else</span>
-            <span class="eco-desc">53 original repos (61 public including forks) and counting. All of it readable, forkable, yours. ↗</span>
-          </a>
-        </div>
-      </section>
-
-      <!-- ============ principles ============ -->
-      <section id="principles" class="section">
-        <div class="section-head">
-          <span class="px-label">PRINCIPLES</span>
-          <span class="px-label dim">FIG. 007 — HOW THIS SHOP OPERATES</span>
-        </div>
-        <div class="principles">
-          <div class="principle">
-            <span class="pr-num">I.</span>
-            <h4>LOCAL-FIRST, ALWAYS</h4>
-            <p>Memory, recall, transcripts, and audio live in files on your disk. The hot
-            paths need no backend service and no account. The cloud is an option, never
-            a dependency.</p>
-          </div>
-          <div class="principle">
-            <span class="pr-num">II.</span>
-            <h4>RECEIPTS, NOT CLAIMS</h4>
-            <p>Everyone says AI built it. Here the prompt, the model, and the reasoning level
-            are published next to the thing itself — and where a human steered, it says so
-            on the label.</p>
-          </div>
-          <div class="principle">
-            <span class="pr-num">III.</span>
-            <h4>AGENT-AGNOSTIC</h4>
-            <p>Codex, Claude Code, OpenCode, Hermes — bring whichever agent you already
-            pay for. Athena is the workshop around them, not another walled garden.</p>
-          </div>
-          <div class="principle">
-            <span class="pr-num">IV.</span>
-            <h4>ONE HONEST PRICE</h4>
-            <p>The tools are free and stay free. The one product that costs money is bought
-            once and owned forever — no subscription, no seats, no upsell to the version
-            that actually works.</p>
+      <!-- ============ who ============ -->
+      <section class="about" id="about">
+        <div class="wrap about-grid">
+          <img class="about-face" src="assets/luckey/avatar.jpg" width="399" height="399" loading="lazy" alt="" />
+          <div class="about-text">
+            <h2 class="display">Who I am.</h2>
+            <p>Luckey Faraday is the name I build under. Since January 2026 I've shipped with AI agents nearly every day and published almost all of it: the code, the prompts, the runs that failed and the revenue.</p>
+            <p>The work goes out as LuckeySystems: the model bench, the arcade, 49 open-source repos and Jarvis. I stream builds on YouTube and tell the story on X.</p>
+            <dl class="books">
+              <div><dt>Jarvis AI</dt><dd class="display">$99</dd><dd class="books-k">total revenue</dd></div>
+              <div><dt>AI Builders</dt><dd class="display">$360</dd><dd class="books-k">annual run rate</dd></div>
+            </dl>
+            <p class="books-note">Open books, as of November 2026. Small, real, and the same numbers as my X bio.</p>
+            <p class="about-links">
+              <a class="text-link" href="https://x.com/luckeyfaraday" target="_blank" rel="noopener">Follow @luckeyfaraday <span aria-hidden="true">↗</span></a>
+              <a class="text-link" href="https://youtube.com/@luckey_faraday" target="_blank" rel="noopener">Watch the builds <span aria-hidden="true">↗</span></a>
+              <a class="text-link" href="https://x.com/luckeysystems" target="_blank" rel="noopener">Bench runs at @luckeysystems <span aria-hidden="true">↗</span></a>
+            </p>
           </div>
         </div>
       </section>
 
-      <!-- ============ foundation ============ -->
-      <section id="foundation" class="section foundation">
-        <div class="section-head">
-          <span class="px-label">FOUNDATION</span>
-          <span class="px-label dim">FIG. 008 — STEWARDSHIP, IN FORMATION</span>
-        </div>
-        <div class="foundation-inner foundation-teaser">
-          <div class="foundation-lead">
-            <svg class="foundation-mark" viewBox="-110 -110 220 220" aria-hidden="true"><g stroke="currentColor" stroke-linecap="round"><use href="#ast"/></g></svg>
-            <h2>GOOD TOOLS SHOULD <em>OUTLIVE</em> THEIR MAKERS<span class="gold">.</span></h2>
-            <p>The <strong>LuckeySystems Foundation</strong> is being formed to hold the Athena
-            projects and marks in trust — so the tools stay open, local-first, and maintained,
-            independent of any one company, cloud, or person. The vision, draft charter, and
-            roadmap are published in the open while it takes shape.</p>
-            <div class="foundation-actions">
-              <a class="btn-solid invert" href="https://foundation.luckeysystems.com">READ THE VISION&nbsp;↗</a>
-              <span class="px-label foundation-seal">IN FORMATION ✳ WILL HOLD THE ATHENA MARKS IN TRUST</span>
-            </div>
+      <!-- ============ close ============ -->
+      <section class="close" aria-labelledby="close-title">
+        <div class="wrap">
+          <h2 class="display" id="close-title">Two ways in.</h2>
+          <div class="close-doors">
+            <a class="close-door close-door--community" href="https://whop.com/luckeyfaraday/ai-builders-community-4e/?utm_source=luckeyfaraday" target="_blank" rel="noopener">
+              <span class="close-what">Learn how I build</span>
+              <span class="close-cta display">Join AI Builders</span>
+              <span class="close-price">$29.99 a month on Whop <span aria-hidden="true">↗</span></span>
+            </a>
+            <a class="close-door close-door--jarvis" href="https://jarvis.luckeysystems.com/#founding">
+              <span class="close-what">Use what I built</span>
+              <span class="close-cta display">Buy Jarvis AI</span>
+              <span class="close-price"><span data-jarvis-num>$99</span> once · <span data-jarvis-note>founding price</span> <span aria-hidden="true">↗</span></span>
+            </a>
           </div>
         </div>
-      </section>
-
-      <!-- ============ closing CTA ============ -->
-      <section class="closing">
-        <svg class="closing-mark spin-slow" viewBox="-110 -110 220 220" aria-hidden="true"><g stroke="currentColor" stroke-linecap="round"><use href="#ast"/></g></svg>
-        <h2>ONE SHOP.<br/>THREE LINES.<br/>EVERY BUILD <em>IN PUBLIC<span class="gold">.</span></em></h2>
-        <a class="btn-solid big" href="https://github.com/luckeyfaraday" target="_blank" rel="noopener">GITHUB.COM/LUCKEYFARADAY&nbsp;↗</a>
       </section>
     </main>
 
-    <!-- ============ footer ============ -->
-    <footer class="site-footer">
-      <div class="footer-lockup">
-        <svg class="footer-mark" viewBox="-110 -110 220 220" aria-hidden="true"><g stroke="currentColor" stroke-linecap="round"><use href="#ast"/></g></svg>
-        <div class="footer-word-block">
-          <span class="footer-wordmark">LUCKEYSYSTEMS</span>
-          <span class="px-label footer-tagline">JARVIS ✳ ARCADE ✳ ATHENA</span>
-        </div>
-      </div>
-      <div class="footer-cols">
-        <div class="footer-col">
-          <span class="px-label gold">LINES</span>
-          <a href="https://jarvis.luckeysystems.com">Jarvis AI — buy ↗</a>
-          <a href="https://games.luckeysystems.com">The Arcade — play ↗</a>
-          <a href="#athena">Athena — free</a>
-          <a href="https://foundation.luckeysystems.com">The Foundation ↗</a>
-        </div>
-        <div class="footer-col">
-          <span class="px-label gold">ATHENA TOOLS</span>
-          <a href="https://github.com/luckeyfaraday/Athena" target="_blank" rel="noopener">Athena Desktop</a>
-          <a href="https://github.com/luckeyfaraday/athena-code" target="_blank" rel="noopener">Athena Code</a>
-          <a href="https://github.com/luckeyfaraday/athena-loops" target="_blank" rel="noopener">Athena Loops</a>
-          <a href="https://github.com/luckeyfaraday/athena-whisper" target="_blank" rel="noopener">Athena Whisper</a>
-        </div>
-        <div class="footer-col">
-          <span class="px-label gold">ELSEWHERE</span>
-          <a href="https://docs.luckeysystems.com">Documentation ↗</a>
-          <a href="https://github.com/luckeyfaraday" target="_blank" rel="noopener">GitHub ↗</a>
-          <a href="https://x.com/luckeyfaraday" target="_blank" rel="noopener">X / Twitter ↗</a>
-          <a href="mailto:luckeyfaraday@proton.me">luckeyfaraday@proton.me</a>
-        </div>
-        <div class="footer-col footer-note">
-          <span class="px-label gold">COLOPHON</span>
-          <p>Set in Bricolage Grotesque, IBM&nbsp;Plex&nbsp;Mono &amp; Silkscreen on
-          hand-pressed cream. No trackers, no analytics, no cookies — obviously.</p>
-        </div>
-      </div>
-      <div class="footer-base">
-        <span class="px-label">LUCKEYSYSTEMS ✳ BUILT WITH AI</span>
-        <span class="px-label dim" data-status>ALL SYSTEMS LOCAL</span>
-        <span class="px-label">SOURCE-AVAILABLE · 2026</span>
+    <footer class="foot">
+      <div class="wrap foot-row">
+        <p>© 2026 Luckey Faraday · <a href="mailto:luckeyfaraday@proton.me">luckeyfaraday@proton.me</a></p>
+        <p class="foot-links">
+          <a href="https://games.luckeysystems.com">Games</a>
+          <a href="https://jarvis.luckeysystems.com">Jarvis</a>
+          <a href="https://github.com/luckeyfaraday" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://docs.luckeysystems.com">Athena docs (archive)</a>
+        </p>
       </div>
     </footer>
 
-  </div>
-
-  <script src="js/main.js"></script>
-</body>
+    <script src="js/main.js" defer></script>
+  </body>
 </html>

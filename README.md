@@ -1,23 +1,28 @@
-# LuckeySystems Website
+# Luckey Faraday — landing page
 
-Marketing site for **LuckeySystems** and the **Athena** ecosystem —
-Athena Desktop, Athena Code, Athena Loops, and Athena Whisper — with a
-company section linking the whole family: Jarvis (commercial voice copilot)
-and the Foundation (stewardship, in formation).
+The page behind the link on the **@luckeyfaraday** X profile, served at
+luckeysystems.com. It says who Luckey Faraday is and sells two things:
+**AI Builders with Luckey** (the Whop community) and **Jarvis AI** (the voice
+copilot). The bench, the arcade and the open-source work are the proof.
+See `BRAND.md` for the reasoning, the identity and the open items.
 
 Static site, zero build step, zero dependencies, zero trackers.
 
 ## Structure
 
 ```
-index.html      single-page site (luckeysystems.com)
-css/style.css   design system ("engineer's field manual": cream / forest green / gold)
-js/main.js      typed terminal demo, copy button, scroll reveals
-assets/         Athena brand marks (synced from context-workspace/client/src/assets)
+index.html      the landing page (luckeysystems.com)
+css/style.css   white / ink, coral for the community, night + cyan for Jarvis; Archivo
+js/main.js      live Jarvis price from jarvis.luckeysystems.com/api/offer, scroll-in
+assets/luckey/     avatar, favicons, OG card
+assets/jarvis-orb/ the Jarvis orb clip (from the real HUD orb renderer)
+assets/community/  the Arena FPS starter walkthrough members get
+assets/bench/      the AK-47 four-model head-to-head
+assets/arcade/     game screenshots from games.luckeysystems.com
 
 jarvis/         jarvis.luckeysystems.com      (nested repo — Jarvis product site)
-foundation/     foundation.luckeysystems.com  (nested repo — Foundation vision)
-docs/           docs.luckeysystems.com        (nested repo — Astro Starlight docs)
+foundation/     foundation.luckeysystems.com  (nested repo — archive)
+docs/           docs.luckeysystems.com        (nested repo — Athena docs, archive)
 ```
 
 ## Develop
@@ -32,10 +37,3 @@ python3 -m http.server 8080
 ## Deploy
 
 Push to GitHub and enable Pages (deploy from branch, root). No build needed.
-
-## Design notes
-
-- Palette: paper `#F3EDE3`, ink `#0F1C16`, gold `#D9C48A` (from the Athena brand lockup).
-- Type: Bricolage Grotesque (display), IBM Plex Mono (data/terminal), Silkscreen (pixel micro-labels).
-- Aesthetic reference: hermes-agent.nousresearch.com — bordered grid cells, tracking labels,
-  blinking cursors, terminal demo, single accent color.
